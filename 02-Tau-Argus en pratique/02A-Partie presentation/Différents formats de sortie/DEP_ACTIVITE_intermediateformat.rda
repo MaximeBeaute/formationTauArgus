@@ -1,0 +1,29 @@
+<SEPARATOR>  ";"
+Activité
+    <RECODEABLE>
+    <TOTCODE> Total
+    <HIERARCHICAL>
+    <HIERLEVELS>  3  1  1  1 
+dep
+    <RECODEABLE>
+    <TOTCODE> Total
+    <HIERARCHICAL>
+    <HIERCODELIST> "D:\jk3kh1\formation - 16-17 février 2015\JD01-Données démonstration\fichiers créés pdt la formation\DEP_ACTIVITE_intermediateformat3_New.HRC"
+    <HIERLEADSTRING> "@"
+export
+    <NUMERIC>
+    <DECIMALS> 1
+FreqVar
+    <FREQUENCY>
+export_Shadow
+    <NUMERIC> <SHADOW>
+export_Cost
+    <NUMERIC> <COSTVAR>
+Top1
+    <MAXSCORE>
+StatusVar
+    <STATUS>
+LowerProtLevel
+    <NUMERIC> <LOWERPL>
+UpperProtLevel
+    <NUMERIC> <UPPERPL>

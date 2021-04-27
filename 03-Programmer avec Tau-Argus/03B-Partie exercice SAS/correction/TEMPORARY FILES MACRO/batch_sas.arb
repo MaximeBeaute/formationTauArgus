@@ -1,0 +1,7 @@
+<OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+<OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+<SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+<SAFETYRULE>     NK(1,80)|NK(0,0)|P(1,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                   
+<READMICRODATA>                                                                                                                                                                                         
+<SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+<WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     

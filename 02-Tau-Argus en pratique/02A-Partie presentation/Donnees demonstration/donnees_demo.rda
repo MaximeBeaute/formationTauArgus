@@ -1,0 +1,20 @@
+Tref 1 4
+    <RECODEABLE>
+    <TOTCODE> "Total"
+APE 6 5
+    <RECODEABLE>
+    <TOTCODE> "Total"
+    <HIERARCHICAL>
+    <HIERLEVELS> 1 2 1 1
+dep 13 2
+    <RECODEABLE>
+    <TOTCODE> "Total"
+    <HIERARCHICAL>
+    <HIERCODELIST> "V:\Formations-Stats\Formation Tau-Argus\Formation Tau-Argus\02-TauArgus en pratique\Donnees demonstration\dep.hrc"
+    <HIERLEADSTRING> "@"
+Poids 16 6
+    <WEIGHT>
+    <DECIMALS> 1
+export 23 10
+    <NUMERIC>
+    <DECIMALS> 2

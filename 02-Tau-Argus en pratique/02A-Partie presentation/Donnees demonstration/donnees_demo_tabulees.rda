@@ -1,0 +1,20 @@
+ <SEPARATOR>  ";"
+ <SAFE> "S"
+ <UNSAFE> "U"
+ <PROTECT> "P"
+ape            
+  <RECODEABLE>
+  <TOTCODE> Total
+dep            
+  <RECODEABLE>
+  <TOTCODE> Total
+un             
+  <NUMERIC>
+  <DECIMALS>  1 
+  <FREQUENCY>
+export         
+  <NUMERIC>
+  <DECIMALS>  1 
+max            
+  <DECIMALS>  1 
+  <MAXSCORE>

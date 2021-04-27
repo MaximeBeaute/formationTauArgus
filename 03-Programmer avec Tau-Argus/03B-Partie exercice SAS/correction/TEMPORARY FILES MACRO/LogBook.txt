@@ -1,0 +1,1083 @@
+03-avr-2020 16:42:10 : 
+03-avr-2020 16:42:10 : ------------------------------------------------
+03-avr-2020 16:42:10 : Start of Tau-Argus run. 03/04/2020 16:42:10
+03-avr-2020 16:42:10 : version 3.5.0 build 27
+03-avr-2020 16:42:10 : Start Batch run: U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\batch_sas.arb
+03-avr-2020 16:42:10 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                               
+03-avr-2020 16:42:10 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                                
+03-avr-2020 16:42:10 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+03-avr-2020 16:42:10 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+03-avr-2020 16:42:10 : Command: <READMICRODATA>                                                                                                                                                                                         
+03-avr-2020 16:42:10 : Start preparing for tabulation
+03-avr-2020 16:42:10 : Table 1: pays x a21 | tomates
+03-avr-2020 16:42:10 : Start explore file: U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\microdata.asc
+03-avr-2020 16:42:10 : Start computing tables
+03-avr-2020 16:42:11 : Compute tables completed
+03-avr-2020 16:42:11 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+03-avr-2020 16:42:11 : Start GHMiter
+03-avr-2020 16:42:11 : Some (7) cells could not be fully protected
+                         See report file for details
+03-avr-2020 16:42:11 : GHMiter finished successfully
+03-avr-2020 16:42:11 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+03-avr-2020 16:42:11 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                                 
+03-avr-2020 16:42:11 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+03-avr-2020 16:42:11 : Table (1) written to file: U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+03-avr-2020 16:42:11 : End of batch run: U:\Mes documents\Workspace\legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:31:28 : 
+06-avr-2020 14:31:28 : ------------------------------------------------
+06-avr-2020 14:31:28 : Start of Tau-Argus run. 06/04/2020 14:31:28
+06-avr-2020 14:31:28 : version 3.5.0 build 27
+06-avr-2020 14:31:28 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:31:28 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 14:31:28 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 14:31:28 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 14:31:28 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 14:31:28 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 14:31:28 : Start preparing for tabulation
+06-avr-2020 14:31:28 : Table 1: pays x a21 | tomates
+06-avr-2020 14:31:28 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 14:31:28 : Start computing tables
+06-avr-2020 14:31:29 : Compute tables completed
+06-avr-2020 14:31:29 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 14:31:29 : Start GHMiter
+06-avr-2020 14:31:29 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 14:31:30 : GHMiter finished successfully
+06-avr-2020 14:31:30 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          1 sec needed
+06-avr-2020 14:31:30 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 14:31:30 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 14:31:30 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 14:31:30 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:38:58 : 
+06-avr-2020 14:38:58 : ------------------------------------------------
+06-avr-2020 14:38:58 : Start of Tau-Argus run. 06/04/2020 14:38:58
+06-avr-2020 14:38:58 : version 3.5.0 build 27
+06-avr-2020 14:38:58 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:38:58 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 14:38:58 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 14:38:58 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 14:38:58 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 14:38:58 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 14:38:58 : Start preparing for tabulation
+06-avr-2020 14:38:58 : Table 1: pays x a21 | tomates
+06-avr-2020 14:38:58 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 14:38:58 : Start computing tables
+06-avr-2020 14:38:59 : Compute tables completed
+06-avr-2020 14:38:59 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 14:38:59 : Start GHMiter
+06-avr-2020 14:38:59 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 14:38:59 : GHMiter finished successfully
+06-avr-2020 14:38:59 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+06-avr-2020 14:38:59 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 14:38:59 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 14:38:59 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 14:38:59 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:39:38 : 
+06-avr-2020 14:39:38 : ------------------------------------------------
+06-avr-2020 14:39:38 : Start of Tau-Argus run. 06/04/2020 14:39:38
+06-avr-2020 14:39:38 : version 3.5.0 build 27
+06-avr-2020 14:39:38 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:39:38 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 14:39:38 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 14:39:38 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 14:39:38 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 14:39:38 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 14:39:38 : Start preparing for tabulation
+06-avr-2020 14:39:38 : Table 1: pays x a21 | tomates
+06-avr-2020 14:39:38 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 14:39:38 : Start computing tables
+06-avr-2020 14:39:39 : Compute tables completed
+06-avr-2020 14:39:39 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 14:39:39 : Start GHMiter
+06-avr-2020 14:39:39 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 14:39:39 : GHMiter finished successfully
+06-avr-2020 14:39:39 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+06-avr-2020 14:39:39 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 14:39:39 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 14:39:39 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 14:39:39 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:40:56 : 
+06-avr-2020 14:40:56 : ------------------------------------------------
+06-avr-2020 14:40:56 : Start of Tau-Argus run. 06/04/2020 14:40:56
+06-avr-2020 14:40:56 : version 3.5.0 build 27
+06-avr-2020 14:40:57 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 14:40:57 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 14:40:57 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 14:40:57 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 14:40:57 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 14:40:57 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 14:40:57 : Start preparing for tabulation
+06-avr-2020 14:40:57 : Table 1: pays x a21 | tomates
+06-avr-2020 14:40:57 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 14:40:57 : Start computing tables
+06-avr-2020 14:40:57 : Compute tables completed
+06-avr-2020 14:40:57 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 14:40:57 : Start GHMiter
+06-avr-2020 14:40:58 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 14:40:58 : GHMiter finished successfully
+06-avr-2020 14:40:58 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          1 sec needed
+06-avr-2020 14:40:58 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 14:40:58 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 14:40:58 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 14:40:58 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:07:16 : 
+06-avr-2020 15:07:16 : ------------------------------------------------
+06-avr-2020 15:07:16 : Start of Tau-Argus run. 06/04/2020 15:07:16
+06-avr-2020 15:07:16 : version 3.5.0 build 27
+06-avr-2020 15:07:17 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:07:17 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 15:07:17 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 15:07:17 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 15:07:17 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 15:07:17 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 15:07:17 : Start preparing for tabulation
+06-avr-2020 15:07:17 : Table 1: pays x a21 | tomates
+06-avr-2020 15:07:17 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 15:07:17 : Start computing tables
+06-avr-2020 15:07:18 : Compute tables completed
+06-avr-2020 15:07:18 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 15:07:18 : Start GHMiter
+06-avr-2020 15:07:18 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 15:07:18 : GHMiter finished successfully
+06-avr-2020 15:07:18 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+06-avr-2020 15:07:18 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 15:07:18 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 15:07:18 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 15:07:18 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:10:46 : 
+06-avr-2020 15:10:46 : ------------------------------------------------
+06-avr-2020 15:10:46 : Start of Tau-Argus run. 06/04/2020 15:10:46
+06-avr-2020 15:10:46 : version 3.5.0 build 27
+06-avr-2020 15:10:46 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:10:46 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 15:10:46 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 15:10:46 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 15:10:46 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 15:10:46 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 15:10:46 : Start preparing for tabulation
+06-avr-2020 15:10:46 : Table 1: pays x a21 | tomates
+06-avr-2020 15:10:46 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 15:10:46 : Start computing tables
+06-avr-2020 15:10:47 : Compute tables completed
+06-avr-2020 15:10:47 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 15:10:47 : Start GHMiter
+06-avr-2020 15:10:47 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 15:10:47 : GHMiter finished successfully
+06-avr-2020 15:10:47 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+06-avr-2020 15:10:47 : Command: <WRITETABLE>     (1,1,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.csv")                                                                                     
+06-avr-2020 15:10:47 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.csv
+                         as Save table in CSVformat
+06-avr-2020 15:10:47 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.csv
+06-avr-2020 15:10:47 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:26:38 : 
+06-avr-2020 15:26:38 : ------------------------------------------------
+06-avr-2020 15:26:38 : Start of Tau-Argus run. 06/04/2020 15:26:38
+06-avr-2020 15:26:38 : version 3.5.0 build 27
+06-avr-2020 15:26:39 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:26:39 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 15:26:39 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 15:26:39 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 15:26:39 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(20,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                  
+06-avr-2020 15:26:39 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 15:26:39 : Start preparing for tabulation
+06-avr-2020 15:26:39 : Table 1: pays x a21 | tomates
+06-avr-2020 15:26:39 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 15:26:39 : Start computing tables
+06-avr-2020 15:26:39 : Compute tables completed
+06-avr-2020 15:26:39 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 15:26:39 : Start GHMiter
+06-avr-2020 15:26:40 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 15:26:40 : GHMiter finished successfully
+06-avr-2020 15:26:40 : Table has been protected by the Hypercube method
+                          24 cells have been suppressed
+                          1 sec needed
+06-avr-2020 15:26:40 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 15:26:40 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 15:26:40 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 15:26:40 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:32:56 : 
+06-avr-2020 15:32:56 : ------------------------------------------------
+06-avr-2020 15:32:56 : Start of Tau-Argus run. 06/04/2020 15:32:56
+06-avr-2020 15:32:56 : version 3.5.0 build 27
+06-avr-2020 15:32:56 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:32:56 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 15:32:57 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 15:32:57 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 15:32:57 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+06-avr-2020 15:32:57 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 15:32:57 : Start preparing for tabulation
+06-avr-2020 15:32:57 : Table 1: pays x a21 | tomates
+06-avr-2020 15:32:57 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 15:32:57 : Start computing tables
+06-avr-2020 15:32:57 : Compute tables completed
+06-avr-2020 15:32:57 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 15:32:57 : Start GHMiter
+06-avr-2020 15:32:58 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 15:32:58 : GHMiter finished successfully
+06-avr-2020 15:32:58 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          1 sec needed
+06-avr-2020 15:32:58 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 15:32:58 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 15:32:58 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 15:32:58 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:33:36 : 
+06-avr-2020 15:33:36 : ------------------------------------------------
+06-avr-2020 15:33:36 : Start of Tau-Argus run. 06/04/2020 15:33:36
+06-avr-2020 15:33:36 : version 3.5.0 build 27
+06-avr-2020 15:33:36 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+06-avr-2020 15:33:36 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+06-avr-2020 15:33:36 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+06-avr-2020 15:33:36 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+06-avr-2020 15:33:36 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(20,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                  
+06-avr-2020 15:33:36 : Command: <READMICRODATA>                                                                                                                                                                                         
+06-avr-2020 15:33:36 : Start preparing for tabulation
+06-avr-2020 15:33:36 : Table 1: pays x a21 | tomates
+06-avr-2020 15:33:36 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+06-avr-2020 15:33:36 : Start computing tables
+06-avr-2020 15:33:37 : Compute tables completed
+06-avr-2020 15:33:37 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+06-avr-2020 15:33:37 : Start GHMiter
+06-avr-2020 15:33:37 : Some (7) cells could not be fully protected
+                         See report file for details
+06-avr-2020 15:33:37 : GHMiter finished successfully
+06-avr-2020 15:33:37 : Table has been protected by the Hypercube method
+                          24 cells have been suppressed
+                          0 sec needed
+06-avr-2020 15:33:37 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+06-avr-2020 15:33:37 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+06-avr-2020 15:33:37 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+06-avr-2020 15:33:37 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:30:34 : 
+07-avr-2020 14:30:34 : ------------------------------------------------
+07-avr-2020 14:30:34 : Start of Tau-Argus run. 07/04/2020 14:30:34
+07-avr-2020 14:30:34 : version 3.5.0 build 27
+07-avr-2020 14:30:34 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:30:34 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 14:30:34 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 14:30:34 : Command: <SPECIFYTABLE>   "PAYS""A21"|"FREQ"|""|""                                                                                                                                                               
+07-avr-2020 14:30:34 : Command: <SAFETYRULE>     FREQ(3,10)|MAN(10)                                                                                                                                                                     
+07-avr-2020 14:30:34 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 14:30:34 : Start preparing for tabulation
+07-avr-2020 14:30:34 : Table 1: pays x a21 | freq
+07-avr-2020 14:30:34 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 14:30:34 : Start computing tables
+07-avr-2020 14:30:35 : Compute tables completed
+07-avr-2020 14:30:35 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 14:30:35 : Start GHMiter
+07-avr-2020 14:30:35 : GHMiter finished successfully
+07-avr-2020 14:30:35 : Table has been protected by the Hypercube method
+                          16 cells have been suppressed
+                          0 sec needed
+07-avr-2020 14:30:35 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_FREQ.sbs")                                                                                        
+07-avr-2020 14:30:35 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_FREQ.sbs
+                         as Save table in SBS-format
+07-avr-2020 14:30:35 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_FREQ.sbs
+07-avr-2020 14:30:35 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:41:05 : 
+07-avr-2020 14:41:05 : ------------------------------------------------
+07-avr-2020 14:41:05 : Start of Tau-Argus run. 07/04/2020 14:41:05
+07-avr-2020 14:41:05 : version 3.5.0 build 27
+07-avr-2020 14:41:05 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:41:05 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 14:41:05 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 14:41:05 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+07-avr-2020 14:41:05 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 14:41:05 : Command: <SPECIFYTABLE>   "CJ""A21"|"TOMATES"|""|""                                                                                                                                                              
+07-avr-2020 14:41:05 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 14:41:05 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 14:41:05 : Start preparing for tabulation
+07-avr-2020 14:41:05 : Table 1: pays x a21 | tomates
+07-avr-2020 14:41:05 : Table 2: cj x a21 2 | tomates
+07-avr-2020 14:41:05 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 14:41:05 : Start computing tables
+07-avr-2020 14:41:06 : Compute tables completed
+07-avr-2020 14:41:06 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 14:41:07 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 14:41:07 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+07-avr-2020 14:41:07 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 14:41:07 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+07-avr-2020 14:41:07 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\cj_a21_tomates.sbs")                                                                                       
+07-avr-2020 14:41:07 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\cj_a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 14:41:07 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\cj_a21_tomates.sbs
+07-avr-2020 14:41:07 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:46:19 : 
+07-avr-2020 14:46:19 : ------------------------------------------------
+07-avr-2020 14:46:19 : Start of Tau-Argus run. 07/04/2020 14:46:19
+07-avr-2020 14:46:19 : version 3.5.0 build 27
+07-avr-2020 14:46:20 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:46:20 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 14:46:20 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 14:46:20 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+07-avr-2020 14:46:20 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 14:46:20 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 14:46:20 : Start preparing for tabulation
+07-avr-2020 14:46:20 : Table 1: pays x a21 | tomates
+07-avr-2020 14:46:20 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 14:46:20 : Start computing tables
+07-avr-2020 14:46:20 : Compute tables completed
+07-avr-2020 14:46:20 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 14:46:20 : Start GHMiter
+07-avr-2020 14:46:21 : Some (7) cells could not be fully protected
+                         See report file for details
+07-avr-2020 14:46:21 : GHMiter finished successfully
+07-avr-2020 14:46:21 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          1 sec needed
+07-avr-2020 14:46:21 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+07-avr-2020 14:46:21 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 14:46:21 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+07-avr-2020 14:46:21 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:58:52 : 
+07-avr-2020 14:58:52 : ------------------------------------------------
+07-avr-2020 14:58:52 : Start of Tau-Argus run. 07/04/2020 14:58:52
+07-avr-2020 14:58:52 : version 3.5.0 build 27
+07-avr-2020 14:58:52 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 14:58:52 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 14:58:52 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 14:58:52 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+07-avr-2020 14:58:52 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 14:58:52 : Command: <SPECIFYTABLE>   "CJ""A21"|"TOMATES"|""|""                                                                                                                                                              
+07-avr-2020 14:58:52 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 14:58:52 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 14:58:52 : Start preparing for tabulation
+07-avr-2020 14:58:52 : Table 1: pays x a21 | tomates
+07-avr-2020 14:58:52 : Table 2: cj x a21 2 | tomates
+07-avr-2020 14:58:52 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 14:58:52 : Start computing tables
+07-avr-2020 14:58:53 : Compute tables completed
+07-avr-2020 14:58:53 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 14:58:54 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 14:58:55 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+07-avr-2020 14:58:55 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 14:58:55 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+07-avr-2020 14:58:55 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\cj_a21_tomates.sbs")                                                                                       
+07-avr-2020 14:58:55 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\cj_a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 14:58:55 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\cj_a21_tomates.sbs
+07-avr-2020 14:58:55 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 15:08:54 : 
+07-avr-2020 15:08:54 : ------------------------------------------------
+07-avr-2020 15:08:54 : Start of Tau-Argus run. 07/04/2020 15:08:54
+07-avr-2020 15:08:54 : version 3.5.0 build 27
+07-avr-2020 15:08:54 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 15:08:54 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 15:08:54 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 15:08:54 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+07-avr-2020 15:08:54 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 15:08:54 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 15:08:54 : Start preparing for tabulation
+07-avr-2020 15:08:54 : Table 1: pays x a21 | tomates
+07-avr-2020 15:08:54 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 15:08:54 : Start computing tables
+07-avr-2020 15:08:55 : Compute tables completed
+07-avr-2020 15:08:55 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 15:08:55 : Start GHMiter
+07-avr-2020 15:08:55 : Some (7) cells could not be fully protected
+                         See report file for details
+07-avr-2020 15:08:55 : GHMiter finished successfully
+07-avr-2020 15:08:55 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+07-avr-2020 15:08:55 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+07-avr-2020 15:08:55 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 15:08:55 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+07-avr-2020 15:08:55 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:01:05 : 
+07-avr-2020 16:01:05 : ------------------------------------------------
+07-avr-2020 16:01:05 : Start of Tau-Argus run. 07/04/2020 16:01:05
+07-avr-2020 16:01:05 : version 3.5.0 build 27
+07-avr-2020 16:01:05 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:01:05 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:01:05 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:01:05 : Command: <SPECIFYTABLE>   "A21"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:01:05 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:01:05 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:01:05 : Start preparing for tabulation
+07-avr-2020 16:01:05 : Table 1: a21 | tomates
+07-avr-2020 16:01:05 : SetHierarchicalcodelist U:\Mes documents\Workspace\formation - legumes\a21.hrc
+                         for variable a21 went wrong
+                          file not found
+07-avr-2020 16:01:05 : Program abnormally terminated
+07-avr-2020 16:01:22 : 
+07-avr-2020 16:01:22 : ------------------------------------------------
+07-avr-2020 16:01:22 : Start of Tau-Argus run. 07/04/2020 16:01:22
+07-avr-2020 16:01:22 : version 3.5.0 build 27
+07-avr-2020 16:01:22 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:01:22 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:01:22 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:01:22 : Command: <SPECIFYTABLE>   "A21"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:01:22 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:01:22 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:01:22 : Start preparing for tabulation
+07-avr-2020 16:01:22 : Table 1: a21 | tomates
+07-avr-2020 16:01:22 : SetHierarchicalcodelist U:\Mes documents\Workspace\formation - legumes\a21.hrc
+                         for variable a21 went wrong
+                          file not found
+07-avr-2020 16:01:22 : Program abnormally terminated
+07-avr-2020 16:01:40 : 
+07-avr-2020 16:01:40 : ------------------------------------------------
+07-avr-2020 16:01:40 : Start of Tau-Argus run. 07/04/2020 16:01:40
+07-avr-2020 16:01:40 : version 3.5.0 build 27
+07-avr-2020 16:01:40 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:01:40 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:01:40 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:01:40 : Command: <SPECIFYTABLE>   "A21"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:01:40 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:01:40 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:01:40 : Start preparing for tabulation
+07-avr-2020 16:01:40 : Table 1: a21 | tomates
+07-avr-2020 16:01:40 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:01:41 : Start computing tables
+07-avr-2020 16:01:41 : Compute tables completed
+07-avr-2020 16:01:41 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 16:01:41 : No unsafe cells found
+                         No protection required
+07-avr-2020 16:01:41 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs")                                                                                          
+07-avr-2020 16:01:41 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:01:41 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs
+07-avr-2020 16:01:41 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:05:00 : 
+07-avr-2020 16:05:00 : ------------------------------------------------
+07-avr-2020 16:05:00 : Start of Tau-Argus run. 07/04/2020 16:05:00
+07-avr-2020 16:05:00 : version 3.5.0 build 27
+07-avr-2020 16:05:00 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:05:00 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:05:00 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:05:00 : Command: <SPECIFYTABLE>   "A21"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:05:00 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:05:00 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:05:00 : Start preparing for tabulation
+07-avr-2020 16:05:00 : Table 1: a21 | tomates
+07-avr-2020 16:05:00 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:05:00 : Start computing tables
+07-avr-2020 16:05:00 : Compute tables completed
+07-avr-2020 16:05:00 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 16:05:00 : No unsafe cells found
+                         No protection required
+07-avr-2020 16:05:00 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs")                                                                                          
+07-avr-2020 16:05:00 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:05:00 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs
+07-avr-2020 16:05:00 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:06:01 : 
+07-avr-2020 16:06:01 : ------------------------------------------------
+07-avr-2020 16:06:01 : Start of Tau-Argus run. 07/04/2020 16:06:01
+07-avr-2020 16:06:01 : version 3.5.0 build 27
+07-avr-2020 16:06:01 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:06:01 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:06:01 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:06:01 : Command: <SPECIFYTABLE>   "A21"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:06:01 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:06:01 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:06:01 : Start preparing for tabulation
+07-avr-2020 16:06:01 : Table 1: a21 | tomates
+07-avr-2020 16:06:01 : SetHierarchicalcodelist U:\Mes documents\Workspace\formation - legumes\a21.hrc
+                         for variable a21 went wrong
+                          file not found
+07-avr-2020 16:06:01 : Program abnormally terminated
+07-avr-2020 16:08:28 : 
+07-avr-2020 16:08:28 : ------------------------------------------------
+07-avr-2020 16:08:28 : Start of Tau-Argus run. 07/04/2020 16:08:28
+07-avr-2020 16:08:28 : version 3.5.0 build 27
+07-avr-2020 16:08:29 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:08:29 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:08:29 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:08:29 : Command: <SPECIFYTABLE>   "A21"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:08:29 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:08:29 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:08:29 : Start preparing for tabulation
+07-avr-2020 16:08:29 : Table 1: a21 | tomates
+07-avr-2020 16:08:29 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:08:29 : Start computing tables
+07-avr-2020 16:08:29 : Compute tables completed
+07-avr-2020 16:08:29 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 16:08:29 : No unsafe cells found
+                         No protection required
+07-avr-2020 16:08:29 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs")                                                                                          
+07-avr-2020 16:08:29 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:08:29 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a21_tomates.sbs
+07-avr-2020 16:08:29 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:09:40 : 
+07-avr-2020 16:09:40 : ------------------------------------------------
+07-avr-2020 16:09:40 : Start of Tau-Argus run. 07/04/2020 16:09:40
+07-avr-2020 16:09:40 : version 3.5.0 build 27
+07-avr-2020 16:09:40 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:09:40 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:09:40 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:09:40 : Command: <SPECIFYTABLE>   "A88"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:09:40 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:09:40 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:09:40 : Start preparing for tabulation
+07-avr-2020 16:09:40 : Table 1: a88 | tomates
+07-avr-2020 16:09:40 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:09:41 : Start computing tables
+07-avr-2020 16:09:42 : Compute tables completed
+07-avr-2020 16:09:42 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 16:09:42 : Start GHMiter
+07-avr-2020 16:09:56 : 
+07-avr-2020 16:09:56 : ------------------------------------------------
+07-avr-2020 16:09:56 : Start of Tau-Argus run. 07/04/2020 16:09:56
+07-avr-2020 16:09:56 : version 3.5.0 build 27
+07-avr-2020 16:09:57 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:09:57 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:09:57 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:09:57 : Command: <SPECIFYTABLE>   "A88"|"TOMATES"|""|""                                                                                                                                                                  
+07-avr-2020 16:09:57 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:09:57 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:09:57 : Start preparing for tabulation
+07-avr-2020 16:09:57 : Table 1: a88 | tomates
+07-avr-2020 16:09:57 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:09:57 : Start computing tables
+07-avr-2020 16:09:58 : Compute tables completed
+07-avr-2020 16:09:58 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+07-avr-2020 16:09:58 : Start GHMiter
+07-avr-2020 16:09:58 : GHMiter finished successfully
+07-avr-2020 16:09:58 : Table has been protected by the Hypercube method
+                          4 cells have been suppressed
+                          0 sec needed
+07-avr-2020 16:09:58 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_tomates.sbs")                                                                                          
+07-avr-2020 16:09:58 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_tomates.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:09:58 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_tomates.sbs
+07-avr-2020 16:09:58 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:27:32 : 
+07-avr-2020 16:27:32 : ------------------------------------------------
+07-avr-2020 16:27:32 : Start of Tau-Argus run. 07/04/2020 16:27:32
+07-avr-2020 16:27:32 : version 3.5.0 build 27
+07-avr-2020 16:27:33 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:27:33 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:27:33 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:27:33 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZAS"|""|""                                                                                                                                                   
+07-avr-2020 16:27:33 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:27:33 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZASABS"|""|""                                                                                                                                                
+07-avr-2020 16:27:33 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:27:33 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:27:33 : Start preparing for tabulation
+07-avr-2020 16:27:33 : Table 1: nuts3 x type_distrib | pizzas
+07-avr-2020 16:27:33 : Table 2: nuts3 2 x type_distrib 2 | pizzasabs
+07-avr-2020 16:27:33 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:27:33 : Start computing tables
+07-avr-2020 16:27:34 : Compute tables completed
+07-avr-2020 16:27:34 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs")                                                                             
+07-avr-2020 16:27:34 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:27:34 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs
+07-avr-2020 16:27:34 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs")                                                                          
+07-avr-2020 16:27:34 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:27:34 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs
+07-avr-2020 16:27:34 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:27:38 : 
+07-avr-2020 16:27:38 : ------------------------------------------------
+07-avr-2020 16:27:38 : Start of Tau-Argus run. 07/04/2020 16:27:38
+07-avr-2020 16:27:38 : version 3.5.0 build 27
+07-avr-2020 16:27:38 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:27:38 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:27:38 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:27:38 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZAS"|""|""                                                                                                                                                            
+07-avr-2020 16:27:38 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:27:38 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZASABS"|""|""                                                                                                                                                         
+07-avr-2020 16:27:38 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:27:38 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:27:38 : Start preparing for tabulation
+07-avr-2020 16:27:38 : Table 1: a88 x nuts0 | pizzas
+07-avr-2020 16:27:38 : Table 2: a88 2 x nuts0 2 | pizzasabs
+07-avr-2020 16:27:38 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:27:39 : Start computing tables
+07-avr-2020 16:27:40 : Compute tables completed
+07-avr-2020 16:27:40 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs")                                                                                     
+07-avr-2020 16:27:40 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:27:40 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs
+07-avr-2020 16:27:40 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs")                                                                                  
+07-avr-2020 16:27:40 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:27:40 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs
+07-avr-2020 16:27:40 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:27:43 : 
+07-avr-2020 16:27:43 : ------------------------------------------------
+07-avr-2020 16:27:43 : Start of Tau-Argus run. 07/04/2020 16:27:43
+07-avr-2020 16:27:43 : version 3.5.0 build 27
+07-avr-2020 16:27:44 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:27:44 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:27:44 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:27:44 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZASCOST"|""|""                                                                                                                                               
+07-avr-2020 16:27:44 : Command: <SAFETYRULE>     MAN(10)                                                                                                                                                                                
+07-avr-2020 16:27:44 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZASCOST"|""|""                                                                                                                                                        
+07-avr-2020 16:27:44 : Command: <SAFETYRULE>     MAN(10)                                                                                                                                                                                
+07-avr-2020 16:27:44 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:27:44 : Start preparing for tabulation
+07-avr-2020 16:27:44 : Table 1: nuts3 x type_distrib | pizzascost
+07-avr-2020 16:27:44 : Table 2: a88 x nuts0 | pizzascost
+07-avr-2020 16:27:44 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:27:44 : Start computing tables
+07-avr-2020 16:27:45 : Compute tables completed
+07-avr-2020 16:27:45 : Command: <APRIORI>        "U:\Mes documents\Workspace\formation - legumes\nuts3 type_distrib pizzascost.hst",1,";"                                                                                               
+07-avr-2020 16:27:45 : Apriory file: U:\Mes documents\Workspace\formation - legumes\nuts3 type_distrib pizzascost.hst applied successfully
+07-avr-2020 16:27:45 : Command: <APRIORI>        "U:\Mes documents\Workspace\formation - legumes\a88 nuts0 pizzascost.hst",2,";"                                                                                                        
+07-avr-2020 16:27:45 : Apriory file: U:\Mes documents\Workspace\formation - legumes\a88 nuts0 pizzascost.hst applied successfully
+07-avr-2020 16:27:45 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 16:27:46 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 16:27:46 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs")                                                                         
+07-avr-2020 16:27:46 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:27:46 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs
+07-avr-2020 16:27:46 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs")                                                                                 
+07-avr-2020 16:27:46 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:27:46 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs
+07-avr-2020 16:27:46 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:28:26 : 
+07-avr-2020 16:28:26 : ------------------------------------------------
+07-avr-2020 16:28:26 : Start of Tau-Argus run. 07/04/2020 16:28:26
+07-avr-2020 16:28:26 : version 3.5.0 build 27
+07-avr-2020 16:28:26 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:28:26 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:28:26 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:28:26 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZAS"|""|""                                                                                                                                                   
+07-avr-2020 16:28:26 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:28:26 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZASABS"|""|""                                                                                                                                                
+07-avr-2020 16:28:26 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:28:26 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:28:26 : Start preparing for tabulation
+07-avr-2020 16:28:26 : Table 1: nuts3 x type_distrib | pizzas
+07-avr-2020 16:28:26 : Table 2: nuts3 2 x type_distrib 2 | pizzasabs
+07-avr-2020 16:28:26 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:28:26 : Start computing tables
+07-avr-2020 16:28:28 : Compute tables completed
+07-avr-2020 16:28:28 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs")                                                                             
+07-avr-2020 16:28:28 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:28:28 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs
+07-avr-2020 16:28:28 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs")                                                                          
+07-avr-2020 16:28:28 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:28:28 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs
+07-avr-2020 16:28:28 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:28:32 : 
+07-avr-2020 16:28:32 : ------------------------------------------------
+07-avr-2020 16:28:32 : Start of Tau-Argus run. 07/04/2020 16:28:32
+07-avr-2020 16:28:32 : version 3.5.0 build 27
+07-avr-2020 16:28:32 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:28:32 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:28:32 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:28:32 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZAS"|""|""                                                                                                                                                            
+07-avr-2020 16:28:32 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:28:32 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZASABS"|""|""                                                                                                                                                         
+07-avr-2020 16:28:32 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+07-avr-2020 16:28:32 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:28:32 : Start preparing for tabulation
+07-avr-2020 16:28:32 : Table 1: a88 x nuts0 | pizzas
+07-avr-2020 16:28:32 : Table 2: a88 2 x nuts0 2 | pizzasabs
+07-avr-2020 16:28:32 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:28:32 : Start computing tables
+07-avr-2020 16:28:34 : Compute tables completed
+07-avr-2020 16:28:34 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs")                                                                                     
+07-avr-2020 16:28:34 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:28:34 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs
+07-avr-2020 16:28:34 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs")                                                                                  
+07-avr-2020 16:28:34 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:28:34 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs
+07-avr-2020 16:28:34 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:28:38 : 
+07-avr-2020 16:28:38 : ------------------------------------------------
+07-avr-2020 16:28:38 : Start of Tau-Argus run. 07/04/2020 16:28:38
+07-avr-2020 16:28:38 : version 3.5.0 build 27
+07-avr-2020 16:28:38 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+07-avr-2020 16:28:38 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+07-avr-2020 16:28:38 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+07-avr-2020 16:28:38 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZASCOST"|""|""                                                                                                                                               
+07-avr-2020 16:28:38 : Command: <SAFETYRULE>     MAN(10)                                                                                                                                                                                
+07-avr-2020 16:28:38 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZASCOST"|""|""                                                                                                                                                        
+07-avr-2020 16:28:38 : Command: <SAFETYRULE>     MAN(10)                                                                                                                                                                                
+07-avr-2020 16:28:38 : Command: <READMICRODATA>                                                                                                                                                                                         
+07-avr-2020 16:28:38 : Start preparing for tabulation
+07-avr-2020 16:28:38 : Table 1: nuts3 x type_distrib | pizzascost
+07-avr-2020 16:28:38 : Table 2: a88 x nuts0 | pizzascost
+07-avr-2020 16:28:38 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+07-avr-2020 16:28:38 : Start computing tables
+07-avr-2020 16:28:39 : Compute tables completed
+07-avr-2020 16:28:39 : Command: <APRIORI>        "U:\Mes documents\Workspace\formation - legumes\nuts3 type_distrib pizzascost.hst",1,";"                                                                                               
+07-avr-2020 16:28:39 : Apriory file: U:\Mes documents\Workspace\formation - legumes\nuts3 type_distrib pizzascost.hst applied successfully
+07-avr-2020 16:28:39 : Command: <APRIORI>        "U:\Mes documents\Workspace\formation - legumes\a88 nuts0 pizzascost.hst",2,";"                                                                                                        
+07-avr-2020 16:28:39 : Apriory file: U:\Mes documents\Workspace\formation - legumes\a88 nuts0 pizzascost.hst applied successfully
+07-avr-2020 16:28:39 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 16:28:40 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+07-avr-2020 16:28:40 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs")                                                                         
+07-avr-2020 16:28:40 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:28:40 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs
+07-avr-2020 16:28:40 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs")                                                                                 
+07-avr-2020 16:28:40 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs
+                         as Save table in SBS-format
+07-avr-2020 16:28:40 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs
+07-avr-2020 16:28:40 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+08-avr-2020 15:03:15 : 
+08-avr-2020 15:03:15 : ------------------------------------------------
+08-avr-2020 15:03:15 : Start of Tau-Argus run. 08/04/2020 15:03:15
+08-avr-2020 15:03:15 : version 3.5.0 build 27
+08-avr-2020 15:03:15 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+08-avr-2020 15:03:15 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+08-avr-2020 15:03:15 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+08-avr-2020 15:03:15 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+08-avr-2020 15:03:15 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(20,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                  
+08-avr-2020 15:03:15 : Command: <READMICRODATA>                                                                                                                                                                                         
+08-avr-2020 15:03:15 : Start preparing for tabulation
+08-avr-2020 15:03:15 : Table 1: pays x a21 | tomates
+08-avr-2020 15:03:15 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+08-avr-2020 15:03:15 : Start computing tables
+08-avr-2020 15:03:16 : Compute tables completed
+08-avr-2020 15:03:16 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+08-avr-2020 15:03:16 : Start GHMiter
+08-avr-2020 15:03:17 : Some (7) cells could not be fully protected
+                         See report file for details
+08-avr-2020 15:03:17 : GHMiter finished successfully
+08-avr-2020 15:03:17 : Table has been protected by the Hypercube method
+                          24 cells have been suppressed
+                          1 sec needed
+08-avr-2020 15:03:17 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+08-avr-2020 15:03:17 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+08-avr-2020 15:03:17 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+08-avr-2020 15:03:17 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:11:11 : 
+09-avr-2020 15:11:11 : ------------------------------------------------
+09-avr-2020 15:11:11 : Start of Tau-Argus run. 09/04/2020 15:11:11
+09-avr-2020 15:11:11 : version 3.5.0 build 27
+09-avr-2020 15:11:11 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:11:11 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:11:11 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:11:11 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZAS"|""|""                                                                                                                                                   
+09-avr-2020 15:11:11 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+09-avr-2020 15:11:11 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZASABS"|""|""                                                                                                                                                
+09-avr-2020 15:11:11 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+09-avr-2020 15:11:11 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:11:11 : Start preparing for tabulation
+09-avr-2020 15:11:11 : Table 1: nuts3 x type_distrib | pizzas
+09-avr-2020 15:11:11 : Table 2: nuts3 2 x type_distrib 2 | pizzasabs
+09-avr-2020 15:11:11 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:11:12 : Start computing tables
+09-avr-2020 15:11:13 : Compute tables completed
+09-avr-2020 15:11:13 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs")                                                                             
+09-avr-2020 15:11:13 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:11:13 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzas.sbs
+09-avr-2020 15:11:13 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs")                                                                          
+09-avr-2020 15:11:13 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:11:13 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzasabs.sbs
+09-avr-2020 15:11:13 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:11:22 : 
+09-avr-2020 15:11:22 : ------------------------------------------------
+09-avr-2020 15:11:22 : Start of Tau-Argus run. 09/04/2020 15:11:22
+09-avr-2020 15:11:22 : version 3.5.0 build 27
+09-avr-2020 15:11:22 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:11:22 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:11:22 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:11:22 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZAS"|""|""                                                                                                                                                            
+09-avr-2020 15:11:22 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+09-avr-2020 15:11:22 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZASABS"|""|""                                                                                                                                                         
+09-avr-2020 15:11:22 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+09-avr-2020 15:11:22 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:11:22 : Start preparing for tabulation
+09-avr-2020 15:11:22 : Table 1: a88 x nuts0 | pizzas
+09-avr-2020 15:11:22 : Table 2: a88 2 x nuts0 2 | pizzasabs
+09-avr-2020 15:11:22 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:11:22 : Start computing tables
+09-avr-2020 15:11:23 : Compute tables completed
+09-avr-2020 15:11:23 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs")                                                                                     
+09-avr-2020 15:11:23 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:11:23 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzas.sbs
+09-avr-2020 15:11:23 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs")                                                                                  
+09-avr-2020 15:11:23 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:11:23 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzasabs.sbs
+09-avr-2020 15:11:23 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:11:26 : 
+09-avr-2020 15:11:26 : ------------------------------------------------
+09-avr-2020 15:11:26 : Start of Tau-Argus run. 09/04/2020 15:11:26
+09-avr-2020 15:11:26 : version 3.5.0 build 27
+09-avr-2020 15:11:27 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:11:27 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:11:27 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:11:27 : Command: <SPECIFYTABLE>   "NUTS3""TYPE_DISTRIB"|"PIZZASCOST"|""|""                                                                                                                                               
+09-avr-2020 15:11:27 : Command: <SAFETYRULE>     MAN(10)                                                                                                                                                                                
+09-avr-2020 15:11:27 : Command: <SPECIFYTABLE>   "A88""NUTS0"|"PIZZASCOST"|""|""                                                                                                                                                        
+09-avr-2020 15:11:27 : Command: <SAFETYRULE>     MAN(10)                                                                                                                                                                                
+09-avr-2020 15:11:27 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:11:27 : Start preparing for tabulation
+09-avr-2020 15:11:27 : Table 1: nuts3 x type_distrib | pizzascost
+09-avr-2020 15:11:27 : Table 2: a88 x nuts0 | pizzascost
+09-avr-2020 15:11:27 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:11:27 : Start computing tables
+09-avr-2020 15:11:28 : Compute tables completed
+09-avr-2020 15:11:28 : Command: <APRIORI>        "U:\Mes documents\Workspace\formation - legumes\nuts3 type_distrib pizzascost.hst",1,";"                                                                                               
+09-avr-2020 15:11:28 : Apriory file: U:\Mes documents\Workspace\formation - legumes\nuts3 type_distrib pizzascost.hst applied successfully
+09-avr-2020 15:11:28 : Command: <APRIORI>        "U:\Mes documents\Workspace\formation - legumes\a88 nuts0 pizzascost.hst",2,";"                                                                                                        
+09-avr-2020 15:11:28 : Apriory file: U:\Mes documents\Workspace\formation - legumes\a88 nuts0 pizzascost.hst applied successfully
+09-avr-2020 15:11:28 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+09-avr-2020 15:11:28 : Command: <SUPPRESS>       GH(0,100,0)                                                                                                                                                                            
+09-avr-2020 15:11:29 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs")                                                                         
+09-avr-2020 15:11:29 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:11:29 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\nuts3_typedistrib_pizzascost.sbs
+09-avr-2020 15:11:29 : Command: <WRITETABLE>     (2,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs")                                                                                 
+09-avr-2020 15:11:29 : Table no: 2 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:11:29 : Table (2) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\a88_nuts0_pizzascost.sbs
+09-avr-2020 15:11:29 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:47:05 : 
+09-avr-2020 15:47:05 : ------------------------------------------------
+09-avr-2020 15:47:05 : Start of Tau-Argus run. 09/04/2020 15:47:05
+09-avr-2020 15:47:05 : version 3.5.0 build 27
+09-avr-2020 15:47:05 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:47:05 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:47:05 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:47:05 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+09-avr-2020 15:47:05 : Command: <SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|MAN(10)                                                                                                                                                    
+09-avr-2020 15:47:05 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:47:05 : Start preparing for tabulation
+09-avr-2020 15:47:05 : Table 1: pays x a21 | tomates
+09-avr-2020 15:47:05 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:47:05 : Start computing tables
+09-avr-2020 15:47:06 : Compute tables completed
+09-avr-2020 15:47:06 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+09-avr-2020 15:47:06 : Start GHMiter
+09-avr-2020 15:47:06 : Some (7) cells could not be fully protected
+                         See report file for details
+09-avr-2020 15:47:06 : GHMiter finished successfully
+09-avr-2020 15:47:06 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          0 sec needed
+09-avr-2020 15:47:06 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+09-avr-2020 15:47:06 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:47:06 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+09-avr-2020 15:47:06 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:47:18 : 
+09-avr-2020 15:47:18 : ------------------------------------------------
+09-avr-2020 15:47:18 : Start of Tau-Argus run. 09/04/2020 15:47:18
+09-avr-2020 15:47:18 : version 3.5.0 build 27
+09-avr-2020 15:47:18 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:47:18 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:47:18 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:47:18 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+09-avr-2020 15:47:18 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(15,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                  
+09-avr-2020 15:47:18 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:47:18 : Start preparing for tabulation
+09-avr-2020 15:47:18 : Table 1: pays x a21 | tomates
+09-avr-2020 15:47:18 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:47:18 : Start computing tables
+09-avr-2020 15:47:19 : Compute tables completed
+09-avr-2020 15:47:19 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+09-avr-2020 15:47:19 : Start GHMiter
+09-avr-2020 15:47:19 : Some (7) cells could not be fully protected
+                         See report file for details
+09-avr-2020 15:47:20 : GHMiter finished successfully
+09-avr-2020 15:47:20 : Table has been protected by the Hypercube method
+                          25 cells have been suppressed
+                          1 sec needed
+09-avr-2020 15:47:20 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+09-avr-2020 15:47:20 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:47:20 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+09-avr-2020 15:47:20 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:49:49 : 
+09-avr-2020 15:49:49 : ------------------------------------------------
+09-avr-2020 15:49:49 : Start of Tau-Argus run. 09/04/2020 15:49:49
+09-avr-2020 15:49:49 : version 3.5.0 build 27
+09-avr-2020 15:49:50 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:49:50 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:49:50 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:49:50 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+09-avr-2020 15:49:50 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(10,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                  
+09-avr-2020 15:49:50 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:49:50 : Start preparing for tabulation
+09-avr-2020 15:49:50 : Table 1: pays x a21 | tomates
+09-avr-2020 15:49:50 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:49:50 : Start computing tables
+09-avr-2020 15:49:50 : Compute tables completed
+09-avr-2020 15:49:50 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+09-avr-2020 15:49:50 : Start GHMiter
+09-avr-2020 15:49:51 : Some (7) cells could not be fully protected
+                         See report file for details
+09-avr-2020 15:49:51 : GHMiter finished successfully
+09-avr-2020 15:49:51 : Table has been protected by the Hypercube method
+                          29 cells have been suppressed
+                          1 sec needed
+09-avr-2020 15:49:51 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+09-avr-2020 15:49:51 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:49:51 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+09-avr-2020 15:49:51 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:51:49 : 
+09-avr-2020 15:51:49 : ------------------------------------------------
+09-avr-2020 15:51:49 : Start of Tau-Argus run. 09/04/2020 15:51:49
+09-avr-2020 15:51:49 : version 3.5.0 build 27
+09-avr-2020 15:51:49 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:51:49 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:51:49 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:51:49 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+09-avr-2020 15:51:50 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(1,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                   
+09-avr-2020 15:51:50 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:51:50 : Start preparing for tabulation
+09-avr-2020 15:51:50 : Table 1: pays x a21 | tomates
+09-avr-2020 15:51:50 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:51:50 : Start computing tables
+09-avr-2020 15:51:50 : Compute tables completed
+09-avr-2020 15:51:50 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+09-avr-2020 15:51:50 : Start GHMiter
+09-avr-2020 15:51:51 : Some (7) cells could not be fully protected
+                         See report file for details
+09-avr-2020 15:51:51 : GHMiter finished successfully
+09-avr-2020 15:51:51 : Table has been protected by the Hypercube method
+                          30 cells have been suppressed
+                          1 sec needed
+09-avr-2020 15:51:51 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+09-avr-2020 15:51:51 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:51:51 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+09-avr-2020 15:51:51 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:53:30 : 
+09-avr-2020 15:53:30 : ------------------------------------------------
+09-avr-2020 15:53:30 : Start of Tau-Argus run. 09/04/2020 15:53:30
+09-avr-2020 15:53:30 : version 3.5.0 build 27
+09-avr-2020 15:53:30 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+09-avr-2020 15:53:30 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+09-avr-2020 15:53:30 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+09-avr-2020 15:53:30 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+09-avr-2020 15:53:30 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(1,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                   
+09-avr-2020 15:53:30 : Command: <READMICRODATA>                                                                                                                                                                                         
+09-avr-2020 15:53:30 : Start preparing for tabulation
+09-avr-2020 15:53:30 : Table 1: pays x a21 | tomates
+09-avr-2020 15:53:30 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+09-avr-2020 15:53:31 : Start computing tables
+09-avr-2020 15:53:31 : Compute tables completed
+09-avr-2020 15:53:31 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+09-avr-2020 15:53:31 : Start GHMiter
+09-avr-2020 15:53:32 : Some (7) cells could not be fully protected
+                         See report file for details
+09-avr-2020 15:53:32 : GHMiter finished successfully
+09-avr-2020 15:53:32 : Table has been protected by the Hypercube method
+                          30 cells have been suppressed
+                          1 sec needed
+09-avr-2020 15:53:32 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+09-avr-2020 15:53:32 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+09-avr-2020 15:53:32 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+09-avr-2020 15:53:32 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+10-avr-2020 10:02:20 : 
+10-avr-2020 10:02:20 : ------------------------------------------------
+10-avr-2020 10:02:20 : Start of Tau-Argus run. 10/04/2020 10:02:20
+10-avr-2020 10:02:20 : version 3.5.0 build 27
+10-avr-2020 10:02:21 : Start Batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb
+10-avr-2020 10:02:21 : Command: <OPENMICRODATA>  "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc"                                                                                                   
+10-avr-2020 10:02:21 : Command: <OPENMETADATA>   "U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\metadata.rda"                                                                                                    
+10-avr-2020 10:02:21 : Command: <SPECIFYTABLE>   "PAYS""A21"|"TOMATES"|""|""                                                                                                                                                            
+10-avr-2020 10:02:21 : Command: <SAFETYRULE>     NK(1,80)|NK(0,0)|P(1,1)|P(0,0,0)|FREQ(11,10)|MAN(10)                                                                                                                                   
+10-avr-2020 10:02:21 : Command: <READMICRODATA>                                                                                                                                                                                         
+10-avr-2020 10:02:21 : Start preparing for tabulation
+10-avr-2020 10:02:21 : Table 1: pays x a21 | tomates
+10-avr-2020 10:02:21 : Start explore file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\microdata.asc
+10-avr-2020 10:02:21 : Start computing tables
+10-avr-2020 10:02:21 : Compute tables completed
+10-avr-2020 10:02:21 : Command: <SUPPRESS>       GH(1,100,0)                                                                                                                                                                            
+10-avr-2020 10:02:21 : Start GHMiter
+10-avr-2020 10:02:22 : Some (7) cells could not be fully protected
+                         See report file for details
+10-avr-2020 10:02:22 : GHMiter finished successfully
+10-avr-2020 10:02:22 : Table has been protected by the Hypercube method
+                          30 cells have been suppressed
+                          1 sec needed
+10-avr-2020 10:02:22 : Command: <WRITETABLE>     (1,4,,"U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs")                                                                                     
+10-avr-2020 10:02:22 : Table no: 1 has been saved
+                         FileName: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+                         as Save table in SBS-format
+10-avr-2020 10:02:22 : Table (1) written to file: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\pays_a21_tomates.sbs
+10-avr-2020 10:02:22 : End of batch run: U:\Mes documents\Workspace\formation - legumes\TEMPORARY FILES MACRO\batch_sas.arb

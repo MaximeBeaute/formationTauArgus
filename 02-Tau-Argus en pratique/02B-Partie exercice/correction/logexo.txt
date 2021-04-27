@@ -1,0 +1,36 @@
+23-mai-2017 09:54:39 : Start preparing for tabulation
+23-mai-2017 09:54:39 : Table 1: etat x produit | particulier
+23-mai-2017 09:54:39 : Start explore file: V:\formation-confidentialite\02-TauArgus en pratique\exercices\Donnees_exo_microdata.asc
+23-mai-2017 09:54:39 : Start computing tables
+23-mai-2017 09:54:39 : Compute tables completed
+23-mai-2017 09:55:17 : Start GHMiter
+23-mai-2017 09:55:19 : GHMiter finished successfully
+23-mai-2017 09:56:01 : Start preparing for tabulation
+23-mai-2017 09:56:01 : Table 1: etat x produit | particulier
+23-mai-2017 09:56:01 : Start explore file: V:\formation-confidentialite\02-TauArgus en pratique\exercices\Donnees_exo_microdata.asc
+23-mai-2017 09:56:01 : Start computing tables
+23-mai-2017 09:56:01 : Compute tables completed
+23-mai-2017 09:57:17 : Start GHMiter
+23-mai-2017 09:57:18 : GHMiter finished successfully
+23-mai-2017 09:58:03 : Table no: 1 has been saved
+                         FileName: V:\formation-confidentialite\02-TauArgus en pratique\exercices\etat_produit_part.sbs
+                         as Save table in SBS-format
+23-mai-2017 10:02:00 : Start preparing for tabulation
+23-mai-2017 10:02:00 : Table 1: etat x produit | tot_ventes
+23-mai-2017 10:02:00 : Table 2: etat 2 x mois | tot_ventes
+23-mai-2017 10:02:00 : Table 3: mois 3 x produit 3 | tot_ventes
+23-mai-2017 10:02:00 : Start explore file: V:\formation-confidentialite\02-TauArgus en pratique\exercices\Donnees_exo_microdata.asc
+23-mai-2017 10:02:00 : Start computing tables
+23-mai-2017 10:02:00 : Compute tables completed
+23-mai-2017 10:06:05 : Start preparing for tabulation
+23-mai-2017 10:06:05 : Table 1: etat x produit | particulier
+23-mai-2017 10:06:05 : Table 2: etat 2 x produit 2 | commerces
+23-mai-2017 10:06:05 : Table 3: etat 3 x produit 3 | tot_ventes
+23-mai-2017 10:06:05 : Start explore file: V:\formation-confidentialite\02-TauArgus en pratique\exercices\Donnees_exo_microdata.asc
+23-mai-2017 10:06:05 : Start computing tables
+23-mai-2017 10:06:05 : Compute tables completed
+23-mai-2017 13:47:06 : Start preparing for tabulation
+23-mai-2017 13:47:06 : Table 1: etat x produit | particulier
+23-mai-2017 13:47:06 : Start explore file: V:\formation-confidentialite\02-TauArgus en pratique\exercices\Donnees_exo_microdata.asc
+23-mai-2017 13:47:06 : Start computing tables
+23-mai-2017 13:47:06 : Compute tables completed

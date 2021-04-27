@@ -1,0 +1,7 @@
+<OPENMICRODATA>  "V:\formation-confidentialite\02-TauArgus en pratique\Donnees demonstration\Donnees_demo.asc"
+<OPENMETADATA>   "V:\formation-confidentialite\02-TauArgus en pratique\Donnees demonstration\Donnees_demo.rda"
+<SPECIFYTABLE>   "APE""dep"|"export"|""|""
+<SAFETYRULE>     NK(1,85)|NK(0,0)|FREQ(3,10)|Wgt(1)|
+<READMICRODATA>
+<SUPPRESS>       GH(1, 100,0)
+<WRITETABLE>     (1,3,3,"V:\formation-confidentialite\02-TauArgus en pratique\Donnees demonstration\ape_dep_expor.sbs")

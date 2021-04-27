@@ -1,0 +1,23 @@
+etat 1 2
+    <RECODEABLE>
+    <TOTCODE> "Total"
+produit 4 8
+    <RECODEABLE>
+    <TOTCODE> "Total"
+    <HIERARCHICAL>
+    <HIERCODELIST> "V:\DG75-L120\confidentialite\Formation Tau-Argus\02-Tau-Argus en pratique\02B-Partie exercice\correction\produit.hrc"
+    <HIERLEADSTRING> "@"
+mois 13 3
+    <RECODEABLE>
+    <TOTCODE> "Total"
+    <HIERARCHICAL>
+    <HIERCODELIST> "V:\DG75-L120\confidentialite\Formation Tau-Argus\02-Tau-Argus en pratique\02B-Partie exercice\correction\mois.hrc"
+    <HIERLEADSTRING> "@"
+poids 17 2
+    <WEIGHT>
+particulier 20 6
+    <NUMERIC>
+commerces 27 6
+    <NUMERIC>
+tot_ventes 34 6
+    <NUMERIC>

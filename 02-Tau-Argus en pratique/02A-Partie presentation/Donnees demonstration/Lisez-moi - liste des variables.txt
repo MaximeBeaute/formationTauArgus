@@ -1,0 +1,8 @@
+1 individu = 1 entreprise
+
+Liste des variables :
+treff : tranche d'effectifs (nombre de salariés)
+APE : code APE (activité de l'entreprise)
+dep : département
+poids : poids de sondage
+exportt : Chiffre d'affaires à l'export (variable de réponse)
