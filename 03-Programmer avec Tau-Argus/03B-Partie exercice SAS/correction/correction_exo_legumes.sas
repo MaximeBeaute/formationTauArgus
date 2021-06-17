@@ -35,6 +35,8 @@ tabulation_1 = pays a21 FREQ);
 
 /* Q4 */
 %TAU_ARGUS(
+TauArgus_exe = &pathTauArgus,
+TauArgus_version = opensource,
 library = &lib,
 tabsas = legumes,
 tabulation_1 = pays a21 tomates,

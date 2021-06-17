@@ -2,14 +2,11 @@
 //
 <OPENMICRODATA>    "V:\Formations-Stats\Formation Tau-Argus\Formation Tau-Argus\02-Tau-Argus en pratique\02B-Partie exercice\microdonnees_entreprises_usa.asc"
 <OPENMETADATA>     "V:\Formations-Stats\Formation Tau-Argus\Formation Tau-Argus\02-Tau-Argus en pratique\02B-Partie exercice\correction\metadonnees_entreprises_usa.rda"
-<SPECIFYTABLE>     "etat""produit"|"commerces"||
-<SAFETYRULE>       NK(1,85)|NK(0,0)|FREQ(3,10)|WGT(1)
 <SPECIFYTABLE>     "etat""produit"|"particulier"||
 <SAFETYRULE>       NK(1,85)|NK(0,0)|FREQ(3,10)|WGT(1)
-<SPECIFYTABLE>     "etat""produit"|"tot_ventes"||
+<SPECIFYTABLE>     "etat""mois"|"particulier"||
+<SAFETYRULE>       NK(1,85)|NK(0,0)|FREQ(3,10)|WGT(1)
+<SPECIFYTABLE>     "mois""produit"|"particulier"||
 <SAFETYRULE>       NK(1,85)|NK(0,0)|FREQ(3,10)|WGT(1)
 <READMICRODATA>
-<SUPPRESS>         GH(1,100,0,1)
-<SUPPRESS>         GH(2,100,0,1)
-<SUPPRESS>         GH(3,100,0,1)
 <GOINTERACTIVE>

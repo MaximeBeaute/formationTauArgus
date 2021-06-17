@@ -1,0 +1,12 @@
+// Vous devez modifier les chemins d'accès de <OPENMICRODATA> et <OPENMETADATA>, pour les faire pointer respectivement sur vos microdonnées et votre fichier de métadonnées.
+//
+<OPENMICRODATA>    "V:\Formations-Stats\Formation Tau-Argus\Formation Tau-Argus\02-Tau-Argus en pratique\02B-Partie exercice\microdonnees_entreprises_usa.asc"
+<OPENMETADATA>     "V:\Formations-Stats\Formation Tau-Argus\Formation Tau-Argus\02-Tau-Argus en pratique\02B-Partie exercice\correction\metadonnees_entreprises_usa.rda"
+<SPECIFYTABLE>     "etat""mois"|"commerces"||
+<SAFETYRULE>       NK(1,85)|NK(0,0)|FREQ(3,10)|WGT(1)|MIS(1)
+<SPECIFYTABLE>     "etat""produit"|"particulier"||
+<SAFETYRULE>       NK(1,85)|NK(0,0)|FREQ(3,10)|WGT(1)|MIS(1)
+<SPECIFYTABLE>     "mois""produit"|"<freq>"||
+<SAFETYRULE>       FREQ(3,10)|WGT(1)|MIS(1)
+<READMICRODATA>
+<GOINTERACTIVE>
