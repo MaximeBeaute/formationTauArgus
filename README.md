@@ -26,3 +26,7 @@ Si vous n'avez pas AUS, vous pouvez également télécharger Tau-Argus de la fa�
 - Par défaut, téléchargez "Version 4.1.7 **with bundled JRE7**" ;
 - Une fois le téléchargement terminé, dézippez le dossier ;
 - Pour lancer Tau-Argus, il suffit alors d'ouvrir ce dossier et de cliquer sur "TauArgus.exe".
+
+# Pour télécharger la macro SAS %Tau_Argus
+La macro SAS %Tau_Argus permettant de faire des appels au logiciel Tau-Argus est disponible sur le dépôt GitHub InseeFrLab à l'adresse suivante : https://github.com/InseeFrLab/SASTauArgus.  
+Pour récupérer la macro, il suffit de suivre ce lien, cliquer sur le bouton vert "Code", puis "Download ZIP". Une fois le téléchargement terminé, il reste à dézipper le fichier obtenu.
