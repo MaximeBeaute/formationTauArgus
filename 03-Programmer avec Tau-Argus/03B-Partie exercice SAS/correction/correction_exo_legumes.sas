@@ -8,7 +8,6 @@ filename tauargus "&lib"; /* répertoire où se trouve la macro */
 /*  Q1  */
 %TAU_ARGUS(
 TauArgus_exe = &pathTauArgus,
-TauArgus_version = opensource,
 library = &lib,
 tabsas = legumes,
 tabulation_1 = pays a21 tomates);
@@ -16,7 +15,6 @@ tabulation_1 = pays a21 tomates);
 /* Q2 */
 %TAU_ARGUS(
 TauArgus_exe = &pathTauArgus,
-TauArgus_version = opensource,
 library = &lib,
 tabsas = legumes,
 tabulation_1 = pays a21 tomates,
@@ -28,7 +26,6 @@ frequency = 11);
 /* Q3 */
 %TAU_ARGUS(
 TauArgus_exe = &pathTauArgus,
-TauArgus_version = opensource,
 library = &lib,
 tabsas = legumes,
 tabulation_1 = pays a21 FREQ);
@@ -36,7 +33,6 @@ tabulation_1 = pays a21 FREQ);
 /* Q4 */
 %TAU_ARGUS(
 TauArgus_exe = &pathTauArgus,
-TauArgus_version = opensource,
 library = &lib,
 tabsas = legumes,
 tabulation_1 = pays a21 tomates,
@@ -45,7 +41,6 @@ tabulation_2 = cj a21 tomates);
 /* Q5 */
 %TAU_ARGUS(
 TauArgus_exe = &pathTauArgus,
-TauArgus_version = opensource,
 library = &lib,
 tabsas = legumes,
 tabulation_1 = a88 tomates,

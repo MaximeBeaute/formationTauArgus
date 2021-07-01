@@ -1,9 +1,9 @@
-/* Macro TauArgus			                                                     									*/
+/* Macro %Tau_Argus			                                                     									*/
 /********************************************************************************************************************/
 /* Cette macro permet de lancer Tau-Argus sans sortir de l'environnement SAS. 										*/
 /* Deux formats d'entrées sont possibles : microdonnées (une table sas), ou des données tabulées, au format fichiers*/
 /* plats correspondant aux besoins du logiciel (données tabulées : .tab, métadonnées correspondantes : .rda).		*/
-/* Les sorties disponibles sont des tables sas, d'un format similiaire à une proc summary (chaque ligne représente 	*/
+/* Les sorties disponibles sont des tables sas, d'un format similaire à une proc summary (chaque ligne représente 	*/
 /* une case de la tabulation), avec une variable "FLAG" dont les modalités signifient :								*/
 /* A	=	case sous secret primaire de fréquence																	*/
 /* B	=	case sous secret primaire de dominance																	*/
@@ -11,17 +11,19 @@
 /* D	=	case sous secret secondaire																				*/
 /* V	=	case diffusable																							*/
 /* Les fichiers générés lors de l'appel de la macro sont placés dans deux répertoires, créés dans la racine du 		*/
-/* repertoire de travail (paramètre '&library') :																	*/
+/* répertoire de travail (paramètre '&library') :																	*/
 /* RESULTS : on y trouvera les masques de secret sous format excel et sas											*/
 /* TEMPORARY FILES MACRO : on y trouvera les fichiers plats et les sorties utilisés par Tau-Argus.					*/
 /********************************************************************************************************************/
-/* Author: Julien LEMASSON (02/11/2017)  								            								*/
+/* Auteurs : Julien LEMASSON, Maxime BEAUTE	            								                            */
 /********************************************************************************************************************/
-/* Macro Parameters                                                                									*/
+/* Version : cf. CHANGELOG.md            	            								                            */
 /********************************************************************************************************************/
-/*library				=	Repertoire de travail. S'y trouvent la table sas en entrée, les éventuels fichiers plats*/
-/*							décrivant les hiérachies des variables hiérarchiques (.hrc), et les éventuels fichiers 	*/
-/*							apriori (.hst). Doit être renseigné.													*/
+/* Paramètres de la macro                                                                							*/
+/********************************************************************************************************************/
+/*library				=	Répertoire de travail. S'y trouve la table sas en entrée, les éventuels fichiers plats  */
+/*							décrivant les hiérarchies des variables hiérarchiques (.hrc), et les éventuels fichiers */
+/*							d'a priori (.hst). Doit être renseigné.													*/
 /*								(vide) : par défaut																	*/
 /*tabsas				=	Nom de la table sas de microdonnées. Doit être renseigné si '&input'='microdata'.		*/
 /*								(vide) : par défaut																	*/
@@ -39,19 +41,19 @@
 /*holding_var			=	Nom de la variable de holding le cas échéant. Il s'agit d'un numéro identifiant type 	*/
 /*							SIREN. Il ne peut n'y en avoir qu'une par appel de macro.								*/
 /*								(vide) : par défaut																	*/
-/*hierarchical_var		=	Liste des variables hiérarchiques, séprarées par un espace. À chaque variable doit être */
-/*							associé un fichier plat (.hrc) décrivant la hiérarchie de la variable. IL est possible	*/
+/*hierarchical_var		=	Liste des variables hiérarchiques, séparées par un espace. À chaque variable doit être	*/
+/*							associée un fichier plat (.hrc) décrivant la hiérarchie de la variable. IL est possible	*/
 /*							de générer des fichiers de hiérarchie en utilisant le paramètre '&hierarchy_x'.			*/
 /*								(vide) : par défaut																	*/
 /*tabulation_1			=	Liste des variables (séparées d'un espace) décrivant la première tabulation. On placera	*/
-/*							les variables de ventilation (caractère) en premiers, pour finir par la variable de 	*/
+/*							les variables de ventilation (caractère) en premier, pour finir par la variable de 	    */
 /*							réponse (numérique). Si la tabulation est un tableau de comptage, la variable de réponse*/
 /*							devra être "FREQ", la macro n'appliquera alors pas la règle de dominance.				*/
 /*								(vide) : par défaut																	*/
 /*tabulation_10			=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
 /*								(vide) : par défaut																	*/
-/*output_name_1			=	Nom des tables en sortie (sas et excel) correspondante aux tabulations. Par défaut, 	*/
-/*							prend le nom de la tabulation correspondant. Utile notamment quand la tabulation fait 	*/
+/*output_name_1			=	Nom des tables en sortie (sas et excel) correspondants aux tabulations. Par défaut, 	*/
+/*							prend le nom de la tabulation correspondante. Utile notamment quand la tabulation fait 	*/
 /*							plus de 32 caractères.																	*/
 /*								(vide) : par défaut																	*/
 /* ...output_name_10	=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
@@ -59,23 +61,23 @@
 /*hierarchy_1			=	Permet de générer le fichier plat .hrc correspondant à l'une des variables hiérarchiques*/
 /*							à partir des variables correspondant aux différents niveaux agrégés (par exemple, pour 	*/
 /*							la commune, il faut disposer des variables DEP et REG). Un fichier d'extension .hrc sera*/
-/*							généré dans le repertoire de travail et prendra le nom de la variable fine (ici COM). 	*/
+/*							généré dans le répertoire de travail et prendra le nom de la variable fine (ici COM). 	*/
 /*							ATTENTION, si un fichier de même nom existait, il sera écrasé. Cette option permet de 	*/
-/*							générer des hiérarchies simples, complète et symétriques. Il est également impératif que*/
-/*							toutes les modalités d'une même variable impliquée soient de même longueur (éviter les	*/
-/*							dep=01,02,...,971,972... ; préférez dep=001,002...971,972.								*/
+/*							générer des hiérarchies simples, complètes et symétriques. Il est également impératif   */
+/*							que toutes les modalités d'une même variable impliquée soient de même longueur (éviter 	*/
+/*							les dep=01,02,...,971,972... ; préférez dep=001,002...971,972.							*/
 /*								(vide) : par défaut																	*/
 /*								liste des variables espacées, de la plus agrégée, à la plus détaillée (qui devra 	*/
 /*								 correspondre à la variable de réponse d'une des tabulations (exemple : REG DEP COM)*/
 /*...hierarchy_10			Idem pour les 9 variables suivantes. 													*/
 /*								(vide) : par défaut																	*/
-/*primary_secret_rules	=	Spécificie les règles de secret primaires. Si la variable de réponse de la tabulation	*/
-/*							est "FREQ", alors seule la règle de fréquence sera apliquée. Les règles de secret 		*/
-/*							primaires peuvent être également affectées par les paramètres '&weight_var' et 			*/
+/*primary_secret_rules	=	Spécifie les règles de secret primaire. Si la variable de réponse de la tabulation		*/
+/*							est "FREQ", alors seule la règle de fréquence sera appliquée. Les règles de secret 		*/
+/*							primaire peuvent être également affectées par les paramètres '&weight_var' et 			*/
 /*							'&holding_var'. Ce paramètre est complété par d'autres paramètres ('&dom_k' '&dom_n' 	*/
 /*							'&dom_khold' '&dom_nhold' '&p_q' '&p_n' '&p_p' '&p_qhold' '&p_nhold' '&p_phold' 		*/
-/*							'&frequency' '&frequencyrange' '&frequencyhold' '&frequencyrangehold') qui spécifie les */
-/*							valeurs des réglages des différentes règles. 											*/
+/*							'&frequency' '&frequencyrange' '&frequencyhold' '&frequencyrangehold') qui spécifient 	*/
+/*							 les valeurs des réglages des différentes règles. 										*/
 /*								DOM : règle de dominance uniquement													*/
 /*								DOM P : règle de dominance et du P%													*/
 /*								DOM FREQ : règle de dominance et de fréquence (par défaut)							*/
@@ -83,19 +85,19 @@
 /*								P FREQ : règle du P% et de fréquence												*/
 /*								P : règle du P% uniquement															*/
 /*								FREQ : règle de fréquence uniquement												*/
-/*								NORULES : 	pas de règles de secret primaire (utile lorsque l'on importe le secret 	*/
-/*											primaire via un fichier apriori (.hst). Lorsque ce paramètre est utilisé*/
-/*											avec un fichier de données tabulées en entrée ("input	=	tabledata") */
-/*											cela signifie que Tau-Argus utilisera l'option "use given status" à la 	*/
-/*											place.																	*/
+/*								NORULES : 	pas de règle de secret primaire (utile lorsque l'on importe le secret 	*/
+/*											primaire via un fichier d'a priori (.hst) ). Lorsque ce paramètre est 	*/
+/*											utilisé avec un fichier de données tabulées en entrée 					*/
+/*											("input = tabledata"), cela signifie que Tau-Argus utilisera l'option  	*/
+/*											"use given status" à la place.											*/
 /*primary_secret_rules_1=	Idem, mais spécifiquement pour la tabulation_1.											*/
-/*								(vide) : par défaut	prends la valeur de '&primary_secret_rules'						*/
+/*								(vide) : par défaut	prend la valeur de '&primary_secret_rules'						*/
 /*...primary_secret_rules_10=Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
-/*								(vide) : par défaut	prends la valeur de '&primary_secret_rules'						*/
+/*								(vide) : par défaut	prend la valeur de '&primary_secret_rules'						*/
 /*dom_k					=	Seuil pour la règle de dominance. Les n (paramètre '&dom_n') premiers contributeurs 	*/
 /*							d'une case de la tabulation ne doivent pas excéder k% de la case.						*/
 /*								85 : (par défaut)																	*/
-/*dom_n					=	Nombre de contribueur pris en compte pour la règle de dominance.						*/
+/*dom_n					=	Nombre de contributeurs pris en compte pour la règle de dominance.						*/
 /*								1 : (par défaut)																	*/
 /*dom_khold				=	Idem '&dom_k', avec prise en compte de l'option "holding".								*/
 /*								85 : (par défaut)																	*/
@@ -105,7 +107,7 @@
 /*							d'une case de la tabulation ne doivent pas pouvoir estimer à moins de p% la valeur du 	*/
 /*							premier contributeur.																	*/
 /*								10 : (par défaut)																	*/	
-/*p_n					=	Nombre de contribueur pris en compte pour la règle du P%.								*/
+/*p_n					=	Nombre de contributeurs pris en compte pour la règle du P%.								*/
 /*								1 : (par défaut)																	*/
 /*p_phold				=	Idem P_P, avec prise en compte de l'option "holding".									*/
 /*								10 : (par défaut)																	*/
@@ -113,7 +115,7 @@
 /*								1 : (par défaut)																	*/
 /*frequency				=	Seuil pour la règle de fréquence. Une case doit contenir au moins x individus.			*/
 /*								3 : (par défaut)																	*/
-/*frequencyrange		=	Valeur à partir de laquelle sera définit l'intervalle de sécurité pour la règle de 		*/
+/*frequencyrange		=	Valeur à partir de laquelle sera définie l'intervalle de sécurité pour la règle de 		*/
 /*							fréquence minimale. Il s'agit habituellement d'une petite valeur positive et est 		*/
 /*							nécessaire pour permettre le calcul du secret secondaire. 								*/
 /*								10 : (par défaut)																	*/
@@ -123,48 +125,59 @@
 /*								10 : (par défaut)																	*/
 /*zero_unsafe			=	Détermine la règle concernant le secret appliqué aux cases dont la valeur est nulle.	*/ 
 /*							Cette option ne modifie pas le secret en cas de secret de fréquence.					*/
-/*								(vide) : le(par défaut) Une case nulle n'est pas cachée								*/
+/*								(vide) : (par défaut) Une case nulle n'est pas cachée								*/
 /*								(une valeur entre 0 et 100) : l'option "zero_unsafe" est appliquée, la valeur 		*/
 /*							correspondant à l'intervalle de sécurité pour les cases concernées.						*/
-/*manual_safety_range	=	When a cell is set manually unsafe (an option to discussed later), t-ARGUS cannot		*/
-/*							calculate safety-ranges itself. Therefore, the user must supply a safety-percentage for */
-/*							this option for the same reasons as in the above section, to allow secondary 			*/
-/*							suppressions to be applied.																*/
+/*manual_safety_range	=	Lorsque le statut d'une cellule est défini manuellement comme unsafe (avec par exemple	*/
+/*							un fichier d'a priori), Tau-Argus ne peut pas calculer lui-même les intervalles de 		*/
+/*							protection. Par conséquent, l'utilisateur doit fournir un pourcentage de protection 	*/
+/*							à la main, qui sera appliqué lors de la suppression secondaire.							*/
 /*								10 : (par défaut)																	*/
 /*shadow_var			=	Variable à partir de laquelle le secret primaire sera effectivement défini. Par défaut	*/
 /*							il s'agit de la variable de réponse. S'applique par défaut à toutes les tabulations.	*/
 /*								(vide) : par défaut																	*/
 /*shadow_var_1			=	Idem, mais spécifiquement pour la tabulation_1.											*/
-/*								(vide) : par défaut	prends la valeur de '&shadow_var'								*/
+/*								(vide) : par défaut	prend la valeur de '&shadow_var'								*/
 /*...shadow_var_10		=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
-/*								(vide) : par défaut	prends la valeur de '&shadow_var'								*/
+/*								(vide) : par défaut	prend la valeur de '&shadow_var'								*/
 /*cost_var				=	Variable qui sera utilisée comme variable de coût pour le secret secondaire. Par défaut	*/
 /*							il s'agit de la variable de réponse. S'applique par défaut à toutes les tabulations		*/
 /*								(vide) : par défaut																	*/
 /*cost_var_1			=	Idem, mais spécifiquement pour la tabulation_1.											*/
-/*								(vide) : par défaut	prends la valeur de '&cost_var'									*/
+/*								(vide) : par défaut	prend la valeur de '&cost_var'									*/
 /*...cost_var_10		=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
-/*								(vide) : par défaut	prends la valeur de '&cost_var'									*/
+/*								(vide) : par défaut	prend la valeur de '&cost_var'									*/
 /*bounds				=	Valeur correspondant à l'option "External a priori bounds on the cell value" lors de 	*/
-/*							l'utilisation du solveur hypercube.														*/
+/*							l'utilisation de la méthode hypercube.													*/
 /*								100 : (par défaut)																	*/
-/*modelsize				=	Valeur correspondant à l'option "Model size" lors de l'utilisation du solveur hypercube	*/
+/*modelsize				=	Valeur correspondant à l'option "Model size" lors de l'utilisation de la méthode 		*/
+/*							hypercube. 																				*/
 /*								0 : normal  (par défaut)															*/
 /*								1 : indicates the large model.														*/
-/*solver				=	Spécifie le solveur utilisé pour traiter le secret secondaire.							*/
+/*lp_solver				=	Spécifie le solveur à utiliser pour traiter le secret secondaire.						*/
+/*								free : solveur gratuit (par défaut)													*/
+/*								xpress	: nécessite la licence XPress de FICO.										*/
+/*								cplex : nécessite la licence CPlex d'IBM.											*/
+/*								(vide) : solveur non-spécifié.														*/
+/*method				=	Spécifie la méthode utilisée pour traiter le secret secondaire.							*/
 /*								hypercube : (par défaut)															*/
-/*								modular : nécessite la license payante sous Tau-Argus 3.5. 							*/
-/*								optimal : nécessite la license payante sous Tau-Argus 3.5, ne fonctionne pas pour 	*/
-/*										  des tableaux liés.														*/
-/*solver_1				=	Idem, mais spécifiquement pour la tabulation_1.											*/
-/*								(vide) : par défaut	prends la valeur de '&solver'									*/
-/*...solver_10			=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
-/*								(vide) : par défaut	prends la valeur de '&solver'									*/
-/*MaxTimePerSubtable	=	Valeur correspondand à l'option MaxTimePerSubtable lors de l'utilisation du solveur 	*/
+/*								modular																				*/
+/*								optimal : ne fonctionne pas pour des tableaux liés.									*/
+/*method_1				=	Idem, mais spécifiquement pour la tabulation_1.											*/
+/*								(vide) : par défaut	prend la valeur de '&method'									*/
+/*...method_10			=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
+/*								(vide) : par défaut	prend la valeur de '&method'									*/
+/*solver				=	Ancien paramètre désormais appelé method.												*/
+/*							Pour des raisons de clarté, il n'est plus possible d'utiliser ce paramètre.			    */
+/*solver_1				=	Ancien paramètre désormais appelé method_1.												*/
+/*							Pour des raisons de clarté, il n'est plus possible d'utiliser ce paramètre.			    */
+/*...solver_10			=	Ancien paramètre désormais appelé method_10.											*/
+/*							Pour des raisons de clarté, il n'est plus possible d'utiliser ce paramètre.			    */
+/*MaxTimePerSubtable	=	Valeur correspondant à l'option MaxTimePerSubtable lors de l'utilisation de la méthode 	*/
 /*							optimal. Il s'agit du nombre de minute qu'on accorde au logiciel pour trouver une 		*/
 /*							solution optimale.																		*/
 /*								(vide) : par défaut																	*/
-/*linked_tables			=	Spécifie si les différentes tabulations décrite dans l'appel de la macro doivent être 	*/
+/*linked_tables			=	Spécifie si les différentes tabulations décrites dans l'appel de la macro doivent être 	*/
 /*							traitées conjointement ou indépendamment en ce qui concerne le secret secondaire.		*/
 /*								yes : (par défaut)																	*/
 /*								no																					*/
@@ -172,12 +185,12 @@
 /*								1 : CVS-file																		*/
 /*								2 : CSV file for pivot table														*/
 /*								3 : Code, value file																*/
-/*								4 : SBS-output format (par défaut)													*/	
+/*								4 : SBS-output format (par défaut)													*/
 /*								5 : Intermediate file (correspond à la sortie sous forme de tabulation (.tab) et du */
-/*									fichier plat de metadonnée correspondant. Format pouvant être utilisé en entrée */
-/*									de la macro (paramètre '&input'	=	tabledata)									*/
-/*parameter				=	Valeur correspondand aux options secondaire lors de la récupération des données en aval */
-/*							de Tau-Argus. Dépend de l'outputtype choisi :											*/
+/*									fichier plat de metadonnée correspondant). Format pouvant être utilisé en       */
+/*									entrée de la macro (paramètre '&input'	=	tabledata)							*/
+/*parameter				=	Valeur correspondant aux options secondaires lors de la récupération des données en aval*/
+/*							de Tau-Argus. Elle dépend de l'outputtype choisi :										*/
 /*								outputtype=1	Not used															*/
 /*								outputtype=2	1 : AddStatus 														*/
 /*												0 = not																*/
@@ -187,12 +200,12 @@
 /*								outputtype=4	0 : none (par défaut)												*/
 /*								outputtype=5	0 = Status only														*/
 /*												1 = also Top-n scores												*/
-/*TauArgus_exe			=	Répertoire et nom de l'application Tau-Argus (Ne pas mettre l'extension .exe).			*/
-/*								C:\Program Files (x86)\TauArgus\TauArgus.exe : (par défaut) Fonctionne sous AUS, sur*/
-/*																				le serveur-de-calcul.insee.fr		*/
-/*TauArgus_version		=	Spécifie la version de Tau-Argus. 														*/
-/*								(vide) : (par défaut) version 3.5, celle installé sur AUS							*/
-/*								opensource																			*/
+/*TauArgus_exe			=	(OBLIGATOIRE) Répertoire et nom de l'application Tau-Argus. 							*/
+/*							Ce paramètre spécifie donc indirectement la version de Tau-Argus utilisée.				*/
+/*							Par exemple : Y:\Logiciels\TauArgus\TauArgus4.2.0b5\TauArgus.exe						*/
+/*TauArgus_version		=	A spécifier lorsque l'on utilise les versions de Tau-Argus antérieures ou égales à 3.5.	*/
+/*								opensource : (par défaut)															*/
+/*								(vide) : pour les versions 3.5 ou moins												*/
 /*synthesis				=	Permet de générer un fichier excel résumant le nombre de case selon le statut de chaque */
 /*							masque sous format excel du répertoire RESULTS.											*/
 /*								yes																					*/
@@ -201,19 +214,19 @@
 /*							secret soient affichées dans les masques. 												*/	
 /*								yes	: (par défaut)																	*/
 /*								no 																					*/
-/*work					=	Permet de vider la word sous sas en fin de programme.									*/
+/*work					=	Permet de vider la bibliothèque Work de SAS en fin de programme.						*/
 /*								empty : (par défaut)																*/
-/*apriori_1				=	Spécifie si à la tabulation_1 on associe un fichier apriori (.hst), qui devra porter le */
-/*							nom de la tabulation_1 avec l'extension .hst, et se trouver dans le répertoire de 		*/
+/*apriori_1				=	Spécifie si à la tabulation_1 on associe un fichier d'a priori (.hst), qui devra porter */
+/*							le nom de la tabulation_1 avec l'extension .hst, et se trouver dans le répertoire de 	*/
 /*							travail.																				*/
 /*								yes 																				*/
 /*								(vide) : par défaut																	*/
 /*...apriori_10			=	Idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
 /*								yes 																				*/
 /*								(vide) : par défaut																	*/
-/*apriori_creation		=	Permet de créer un fichier apriori (format .hst) à partir de chaque tabulation. Il 		*/
+/*apriori_creation		=	Permet de créer un fichier d'a priori (format .hst) à partir de chaque tabulation. Il 	*/
 /*							s'agit d'un fichier qui devra être chargé par Tau-Argus en aval de la spécification des	*/
-/*							tableaux et des règles du secret primaire et en amont d'appiquer le secret secondaire.	*/
+/*							tableaux et des règles du secret primaire et en amont d'appliquer le secret secondaire.	*/
 /*							Cela nécessite que le paramètre '&outputtype' soit égal à "4" (sortie au format .sbs).	*/
 /*								yes : pour appliquer cette option													*/
 /*								(vide) : (par défaut)																*/
@@ -221,10 +234,100 @@
 /********************************************* AJOUT le 12/12/2017***************************************************/
 /********************************************************************************************************************/
 /*compute_missing_totals=	Permet d'utiliser l'option du même nom lorsque l'on a en entrée une ou des tabulations.	*/
-/*							Cela signifie que l'on autorise Tau-Argus a recalculer les marges à partir des cases 	*/
-/*							interne de la tabulation. 																*/
+/*							Cela signifie que l'on autorise Tau-Argus à recalculer les marges à partir des cases 	*/
+/*							internes de la tabulation. 																*/
 /*								yes : pour appliquer cette option													*/
 /*								(vide) : (par défaut)																*/
+/********************************************************************************************************************/
+
+
+
+/*
+------------------------------------------------------------------------------------
+				CONSEILS EN AMONT DE L'UTILISATION DE LA MACRO
+------------------------------------------------------------------------------------
+- Faire en sorte qu'il n'y ait pas de valeur manquante (par exemple, effectif = .) pour les variables de réponse (numériques). Ces unités ne 
+participant pas aux cases de la tabulation ne doivent pas être comptabilisées, elles sont hors champ.
+
+- Si pour certaines unités on dispose d'autorisations spéciales de diffusion (comme pour La Poste, largement dominant dans son secteur d'activité, 
+pour les diffusions ESANE par exemple), il conviendra de préparer un fichier d'a priori (.hst) pour chaque tabulation, avec le statut que l'on désire 
+appliquer aux cases concernées par la présence des unités en question.
+
+- La table sas correspondant au paramètre '&tabsas' ne doit comporter que les unités participant aux tabulations demandées. Elle pourra néanmoins 
+comporter des variables ne servant pas à la pose du secret, mais plus elle sera volumineuse, plus le traitement sera long.
+
+- Préférer les noms de variable courts, pour éviter d'avoir des TABULATIONS dépassant les 32 caractères.
+
+- Si on doit secrétiser un nombre important de tabulations, a fortiori si les données individuelles sont volumineuses, il peut être intéressant 
+de tester le secret primaire en amont (via une proc means par exemple), pour n'utiliser la présente macro que pour les tabulations concernées par 
+du secret primaire.
+
+- Il est possible d'utiliser les sous-macro contenues dans la macro principale, notamment :
+	%ASC_RDA		=	génère les fichiers plats de micronnées (.asc) et de métadonnées (.rda) au format compatible avec Tau-Argus, à partir de 
+						la TABSAS.
+	%HRC			=	génère un fichier de hiérarchie (.hrc), à partir de la TABSAS. Celle-ci devra comporter toutes les variables correspondant 
+						aux différents niveaux agrégés souhaités dans sa hiérarchie.
+	%TAUARGUSEXE	=	permet de lancer un fichier batch Tau-Argus (.arb) à partir de sas.
+	%FORMATING		=	génère des tables sas et des fichiers excel à partir des sorties Tau-Argus au format SBS (.sbs). La présentation des masques 
+						de secret ressemble à un output d'un proc summary (une ligne = une case de la tabulation).
+	%SYNTHESIS		=	génère un fichier excel comptabilisant le nombre de cases selon leur statut, pour chaque tabulation et pour l'ensemble des 
+						tabulations.
+
+- Lorsque l'on travaille à partir de tableaux en entrée, plutôt qu'à partir de microdonnées (&input = tabledata), il peut être préférable d'arrondir 
+ses variables de réponse à l'unité, avant de tabuler. Tau-Argus est très sensible à la non additivité des marges (même s'il existe, en manuel, des 
+options pour ne pas tenir compte de ce problème).
+
+
+
+------------------------------------------------------------------------------------
+								LES IMPERATIFS ET LIMITES
+------------------------------------------------------------------------------------
+- Faire en sorte que les variables hiérarchiques aient des modalités fines de même longueurs.
+
+- Dans le cas de variable hiérarchique non symétrique et complexe (par exemple, si on désire diffuser au niveau communal dans une région, mais 
+uniquement au niveau départemental dans les autres régions), il faut préparer le fichier de hiérarchie en amont de l'utilisation de la macro. 
+
+- On ne peut gérer le secret que sur 10 tabulations par session Tau-Argus.
+
+- Modular ne peut gérer que 4 variables de ventilations maximum (en comptant toutes les variables des tableaux liés).
+
+- Hypercube ne peut gérer que 6 variables de ventilations maximum (en comptant toutes les variables des tableaux liés).
+
+- Hypercube ne fonctionne pas avec des hiérarchies avec plus de 7 niveaux (au moins dans la version 3.5 de Tau-Argus).
+
+
+
+------------------------------------------------------------------------------------
+									REMARQUES GENERALES
+------------------------------------------------------------------------------------
+- Dans certains cas, il n'est pas nécessaire de gérer la confidentialité en déterminant le secret primaire et en appliquant une couche de secret 
+secondaire. 
+Certaines variables de réponse peuvent être tellement corrélées à d'autres variables de réponses (effectif ETP et effectif au 3112 par exemple) qu'il 
+est préférable de simplement appliquer le même masque de secret au deux variables, alors défini sur l'une des deux. La variable sur laquelle est 
+déterminée le masque est appelée variable proxy. 
+
+- Certaines vérifications sont parfois nécessaires en plus de l'application de la macro ou de la gestion "à la main" du secret secondaire via 
+Tau-Argus. 
+Par exemple, deux variables de ventilations peuvent avoir des modalités équivalentes sans pour autant que Tau-Argus ne soit capable de le savoir. Par 
+exemple, la division 17 de la NAF correspond à la modalité E35 de la Nomenclature d'activités économiques 2008 (NCE 2008). Il conviendra en aval de 
+l'exécution de la macro, de vérifier que les cases équivalentes ont bien le même statut (notamment au niveau du secret secondaire). Si ce n'est pas 
+le cas, on pourra alors générer un fichier d'a priori (.hst) pour spécifier le statut que doit prendre les cases concernées.
+
+- Dans le cas des variables hiérarchiques, il est préférable d'éviter d'avoir des modalités identiques correspondant à des niveaux d'agrégations 
+différents : par exemple le niveau A38 "FZ" ne correspond pas pour Tau-Argus au niveau A10 "FZ". Préférez un recodage en amont de l'appel de la 
+macro (par exemple : "A38_FZ" et "A10_FZ"), pour que Tau-Argus distingue bien les deux lignes du tableau.
+
+- Dans le cas de tableaux trop volumineux (trop de cases), ou avec des valeurs très grandes (en millions/milliard) et avec beaucoup de décimales, il 
+peut être envisageable de faire tourner la macro sur une version modifiée de la variable de réponse. Parfois le fait d'arrondir les données peut 
+suffire à ce que le secret secondaire se fasse. Si cela ne suffit pas, on pourra essayer de diviser la variable par 10 par exemple.
+
+
+*/
+
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+/* 	Code de la macro																								*/
+/********************************************************************************************************************/
 /********************************************************************************************************************/
 
 
@@ -266,7 +369,7 @@
 		run ; 
 	%end ; 
 	/* On commence par la création du fichier de microdonnées (.asc)													
-	On crée les paramètres '&response_var' et '&explanatory_var' à partir des infos des divers tabulations. On agrége les
+	On crée les paramètres '&response_var' et '&explanatory_var' à partir des informations des différentes tabulations. On agrège les
 	variables de ventilation et on élimine les doublons, idem pour les variables de comptage, en se servant de la	
 	macro %unique qui suit la macro %asc_rda.*/
 	data variables ; 
@@ -328,7 +431,7 @@
 	%if &test_explanatory_var > 4 %then
 		%do ; 
 			data _null_ ; 
-				put "WARNING: le nombre de variable de ventilation est de &test_explanatory_var.. La limite de variables de ventilation est de 4 maximum pour le solveur modular et de 6 maximum pour le solveur hypercube." ; 
+				put "WARNING: le nombre de variable de ventilation est de &test_explanatory_var.. La limite de variables de ventilation est de 4 maximum pour la méthode modular et de 6 maximum pour la méthode hypercube." ; 
 			run ; 
 		%end ; 
 
@@ -603,8 +706,8 @@
 		by varnum ; 
 	run ; 
 
-	/* Cette data permet de récupérer l'info de la longueur de la ligne d'au dessus, ce qui permet de calculer la
-	position et la longueur que prendra la variable dans le file plat, on a besoin ici de la position de départ et
+	/* Cette data permet de récupérer l'info de la longueur de la ligne d'au-dessus, ce qui permet de calculer la
+	position et la longueur que prendra la variable dans le fichier plat, on a besoin ici de la position de départ et
 	celle d'arrivée ex. SIREN 1-9 APE 11-15 etc.*/
 	data _null_ ; 
 		set contenti ; 
@@ -720,7 +823,7 @@
 	%macro decimal (decimal=) ; 
 		%do loop	=	1 %to %sysfunc(countw(&varr.)) ; 
 		    %let WORD	=	%scan(&decimal.,&loop.) ; 
-		    %put boucle &loop. : &WORD. ; 
+		   /* %put boucle &loop. : &WORD. ; */
 			data temp05 ; 
 				set decimal ; 
 				max_varr	=	0 ; 
@@ -797,7 +900,7 @@
 
 /********************************************************************************************************************/
 /********************************************************************************************************************/
-/*								suprression des doublons dans une liste de variable									*/
+/*								suppression des doublons dans une liste de variable									*/
 /********************************************************************************************************************/
 /* %unique		=	supprime les doublons dans une liste de variable												*/
 /********************************************************************************************************************/
@@ -893,7 +996,7 @@
 /*						tab			=	nom de la table sas (doivent s'y trouver : les variables correspondant à 	*/
 /*										chaque niveau agrégé ("commune","dep", "reg" par exemple)					*/
 /*						detailed_var=	nom de la variable fine ("commune" par exemple)								*/
-/*						agreg		=	noms des variables séparé par un espace qui font partie de l'arbre dans 	*/
+/*						agreg		=	noms des variables séparés par un espace qui font partie de l'arbre dans 	*/
 /*										l'ordre du plus agrégé au plus fin ("reg dep commune")						*/
 /*						library_hrc	=	nom du répertoire et du nom de fichier hrc généré à la fin.					*/	
 /*
@@ -992,7 +1095,7 @@
 			    	call symput ("nb_line",put(_N_,8.)); 
 				end;
 			run;
-			/* Pour éviter que la log soit pleine et que la macro cesse de fonctionner,on supprime la log à chaque boucle.*/
+			/* Pour éviter que la log soit pleine et que la macro cesse de fonctionner, on supprime la log à chaque boucle.*/
 			/*dm "log;clear;";*/
 		%end;
 
@@ -1022,9 +1125,9 @@
 
 /********************************************************************************************************************/
 /********************************************************************************************************************/
-/*								Préparation de fichier temporairepour les macro suivantes							*/
+/*								Préparation de fichier temporaire pour les macro suivantes							*/
 /********************************************************************************************************************/
-/* %batch_file	=	on génère les fichiers vierge que les macro suivante viendront remplir.							*/
+/* %batch_file	=	on génère les fichiers vierges que les macro suivantes viendront remplir.						*/
 /********************************************************************************************************************/
 /********************************************************************************************************************/
 %macro batch_file (
@@ -1043,11 +1146,12 @@
 			values('<SAFETYRULE>')
 			values('<READMICRODATA>')
 			values('<READTABLE>')
+			values('<SOLVER>')
 			values('<SUPPRESS>')
 			values('<APRIORI>')
 			values('<WRITETABLE>') 
 			/*values('<GOINTERACTIVE>')*//* Option qui permet en manuel d'avoir le TauArgus_version qui reste ouvert 
-			après l'exécution du batch, mais qui empêche l'enchainement des batchs sous la version Open Source.*/
+			après l'exécution du batch, mais qui empêche l'enchaînement des batchs sous la version Open Source.*/
 			values('test') ;                                                                                                                                                                                                                        
 	quit ;  
 
@@ -1429,29 +1533,53 @@
 
 /********************************************************************************************************************/
 /********************************************************************************************************************/
+/*								Remplissage de la ligne SOLVER du batch												*/
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+%macro solver_batch (
+	lp_solver_batch		=	free) ; 
+
+	data tab6 ; 
+		length instruction $150 ; 
+		set empty_batch (where	=	(operation in ("<SOLVER>"))) ; 
+		%if &lp_solver_batch = free %then %do;
+			if operation 	=	"<SOLVER>" then instruction 	=	"FREE" ; 
+		%end;
+		%if &lp_solver_batch = xpress %then %do;
+			if operation 	=	"<SOLVER>" then instruction 	=	"XPRESS" ; 
+		%end;
+		%if &lp_solver_batch = cplex %then %do;
+			if operation 	=	"<SOLVER>" then instruction 	=	"CPLEX" ; 
+		%end; 
+		if instruction		=	"" then delete ; 
+	run ; 
+%mend ; 
+
+/********************************************************************************************************************/
+/********************************************************************************************************************/
 /*								Remplissage des lignes SUPPRESS du batch											*/
 /********************************************************************************************************************/
 /********************************************************************************************************************/
 %macro suppress (
 	bounds					=	100,
 	modelsize				=	0,
-	solver_all				=	hypercube,
-	solver_x				=	,
+	method_all				=	hypercube,
+	method_x				=	,
 	MaxTimePerSubtable		=	20,
 	linked_tables			=	yes); 
 
-	%if &solver_x ne %then
+	%if &method_x ne %then
 		%do ; 
 			data _null_ ; 
-				call symput ("solverr","&solver_x") ; 
+				call symput ("methodd","&method_x") ; 
 			run ; 
 		%end ; 
 	%else 
 		%do ; 
-			%if &solver_x	=	%then
+			%if &method_x	=	%then
 				%do ; 
 					data _null_ ; 
-						call symput ("solverr","&solver_all") ; 			
+						call symput ("methodd","&method_all") ; 			
 					run ; 
 				%end ; 
 		%end ; 
@@ -1469,16 +1597,16 @@
 		set 
 		tab3 (where	=	(operation ne 'test')) 
 		empty_batch (where	=	(operation in("<SUPPRESS>"))) ; 
-		solver				=	"&solverr" ; 
-		if operation 		=	"<SUPPRESS>" and instruction	=	'' and solver	=	"hypercube" 
+		method				=	"&methodd" ; 
+		if operation 		=	"<SUPPRESS>" and instruction	=	'' and method	=	"hypercube" 
 		then instruction 	=	compress("GH"||"("||&ntab||","||"&bounds"||","||"&modelsize"||")") ; 
 		else 
-		if operation 		=	"<SUPPRESS>" and instruction	=	'' and solver	=	 "modular" 
+		if operation 		=	"<SUPPRESS>" and instruction	=	'' and method	=	 "modular" 
 		then instruction 	=	compress("MOD"||"("||&ntab||")") ; 
 		else 
-		if operation 		=	"<SUPPRESS>" and instruction	=	'' and solver	=	 "optimal" 
+		if operation 		=	"<SUPPRESS>" and instruction	=	'' and method	=	 "optimal" 
 		then instruction 	=	compress("OPT"||"("||&ntab||","||"&MaxTimePerSubtable"||")") ; 
-		drop solver ; 
+		drop method ; 
 		if instruction		=	"" then delete ; 
 	run ; 
 %mend ; 
@@ -1535,7 +1663,7 @@
 /*													Execution du batch												*/
 /********************************************************************************************************************/
 /********************************************************************************************************************/
-/* %TauArgusexe	=	execute le batch et renseigne le file texte logbook du déroulement du processus sous Tau-Argus	*/
+/* %TauArgusexe	=  exécute le batch et renseigne le fichier texte logbook du déroulement du processus sous Tau-Argus*/
 /********************************************************************************************************************/
 /********************************************************************************************************************/
 %macro TauArgusexe (
@@ -1569,7 +1697,7 @@
 			data _null_ ; 
 				put "ERROR: Tau-Argus n'a pas trouvé de solution.";
 				put "WARNING: Il existe de nombreuses raisons possibles à cela. Le logbook présent dans le répertoire 'TEMPORARY FILES MACRO' pourra éventuellement vous aider à comprendre l'origine du problème." ;
-				put "WARNING: L'une des raisons probables est que l'algorithme choisi pour la résolution du secret secondaire (&solver) n'a pas trouvé de solution du fait de la complexité du ou des tableaux." ; 
+				put "WARNING: L'une des raisons probables est que l'algorithme choisi pour la résolution du secret secondaire (&method) n'a pas trouvé de solution du fait de la complexité du ou des tableaux." ; 
 			run ; 
 			%abort ; 
 		%end ;
@@ -1849,7 +1977,7 @@
 /*										Création d'un fichier excel de synthèse										*/
 /********************************************************************************************************************/
 /********************************************************************************************************************/
-/* %synthesis	=	génère pour dans le répertoire library_synthesis un fichier excel comptabilisant le nombre de 	*/
+/* %synthesis	=	génère dans le répertoire library_synthesis un fichier excel comptabilisant le nombre de 	*/
 /*					cases selon leur statut (flag) pour chaque masque de secret au format excel du répertoire.
 /********************************************************************************************************************/
 /********************************************************************************************************************/
@@ -1947,64 +2075,13 @@
 	run ;
 %mend ;  
 
-/********************************************************************************************************************/
-/********************************************************************************************************************/
-/*													correction_output5												*/
-/********************************************************************************************************************/
-/********************************************************************************************************************/
-/* %correction_output5	=	lors de l'exportation des données tabulées sous Tau-Argus au format "intermediate format*/
-/*							génère une erreur dans le fichier .tab. Les cases sans individus apparaissent, et lors 	*/
-/*							de l'importation de cette tabulation par la suite dans Tau-Argus, les cases sans 		*/
-/*							individus apparaissent comme avec un individus sans valeur, ce qui peut induire en 		*/
-/*							erreur. On supprime donc ces lignes ici.												*/
-/********************************************************************************************************************/
-/********************************************************************************************************************/
-%macro correction_output5 (library,output_name);
-	proc import 	datafile	=	"&library.\TEMPORARY FILES MACRO\&output_name..tab"
-					out			=	&output_name
-					dbms		=	dlm replace ; 
-					delimiter	=	';' ; 
-					getnames	=	no ; 
-	RUN;
-	
-	data _null_ ; 
-		call symput ("nb_vent",count("&output_name","_")+1) ;
-	run ;
-
-		%do f1	=	1 %to &nb_vent ; 
-			data _null_ ; 
-				call symput ("var&f1",scan("&output_name",&f1,"_"));
-			run;
-		%end;
-
-	data _null_ ; 
-		call symput ("freqvar",count("&output_name","_")+2);
-	run;
-
-	data &output_name (where	=	(freqvar ne 0));
-		set &output_name ;
-			%do f2	=	1 %to &nb_vent ; 
-				rename var&f2	=	&&var&f2 ;
-			%end;
-			%do f3	=	&freqvar %to &freqvar ; 
-				rename var&f3	=	freqvar ;
-			%end;
-	run;
-
-	proc export	data		=	&output_name
-		        outfile		=	"&library.\TEMPORARY FILES MACRO\&output_name..tab" 
-        		dbms		=	dlm replace ;
-				delimiter	=	';' ; 
-				putnames	=	no ;
-	run ;
-%mend;
 
 /********************************************************************************************************************/
 /********************************************************************************************************************/
 /*														Macro principale											*/
 /********************************************************************************************************************/
 /********************************************************************************************************************/
-%macro TAU_ARGUS (
+%macro Tau_Argus (
 	library											=						,	
 	tabsas											=						,
 	batch_name										=	batch_sas.arb		,
@@ -2091,9 +2168,21 @@
 	manual_safety_range								=	10					,
 	bounds											=	100					,
 	modelsize										=	0					,
-	solver											=	hypercube			,
+	method											=	hypercube			,
+	solver											=						,
 	MaxTimePerSubtable								=	20					,
 	linked_tables									=	yes					,
+	lp_solver										=	free				,
+	method_1										=						,
+	method_2										=						,
+	method_3										=						,
+	method_4										=						,
+	method_5										=						,
+	method_6										=						,
+	method_7										=						,
+	method_8										=						,
+	method_9										=						,
+	method_10										=						,
 	solver_1										=						,
 	solver_2										=						,
 	solver_3										=						,
@@ -2106,8 +2195,8 @@
 	solver_10										=						,
 	outputtype										=	4					,
 	parameter										=						,
-	TauArgus_exe									=	C:\Program Files (x86)\TauArgus\TauArgus.exe,
-	TauArgus_version								=						,
+	TauArgus_exe									=						,
+	TauArgus_version								=	opensource			,
 	synthesis										=	no					,
 	displayed_value									=						,
 	work											=	empty				,
@@ -2134,6 +2223,35 @@
 
 	/* On fait ici une série de vérification, pour informer l'utilisateur le cas échéant du problème rencontré.*/
 
+	/* On vérifie que le paramètre obligatoire TauArgus_exe est bien renseigné.*/
+	%if %length(&TauArgus_exe) = 0 %then %do;
+		data _null_ ; 
+			put "ERROR: Le paramètre TauArgus_exe est désormais obligatoire. Veuillez le renseigner." ; 
+		run ; 
+		%ABORT ; 
+	%end;
+
+	/* On teste les pramètres qui ne sont plus utilisables : solver, solver_1, ..., solver_10. */
+	%if %length(&solver) 
+		or %length(&solver_1)
+		or %length(&solver_2)
+		or %length(&solver_3)
+		or %length(&solver_4)
+		or %length(&solver_5)
+		or %length(&solver_6)
+		or %length(&solver_7)
+		or %length(&solver_8)
+		or %length(&solver_9)
+		or %length(&solver_10)  
+	%then %do ; 
+		data _null_ ; 
+			put "ERROR: Les paramètres solver, solver_1, ..., solver_10 qui permettaient de spécifier la méthode ne sont plus utilisables.";
+			put "ERROR: Veuillez utiliser les paramètres method, method_1, ..., method_10 qui les remplacent." ;
+			put "ERROR: Si vous souhaitez plutôt spécifier le solveur, veuillez utiliser le paramètre lp_solver." ; 
+		run ; 
+		%ABORT ; 
+	%end ; 
+
 	/* on teste la validité des longueurs &library+&tabulation, et en cas de longueur trop importante, on stoppe la macro et on prévient 
 	l'utilisateur avec un message d'alerte.*/
 	data _null_ ; 
@@ -2143,8 +2261,7 @@
 	%if &length_library > 128 %then 
 		%do ; 
 			data _null_ ; 
-				put "ERROR: longueur du parametre library trop longue" ; 
-				"WARNING: la longueur du library ne doit pas exceder 128 caractères" ; 
+				put "ERROR: La longueur du paramètre library ne doit pas exceder 128 caractères." ; 
 			run ; 
 			%ABORT ; 
 		%end ; 
@@ -2176,13 +2293,12 @@
 	%if &error_primary_secret_rules = yes %then
 		%do ;
 			data _null_ ; 
-				put "ERROR: le paramètre '&primary_secret_rules' est mal renseigné"
-				"WARNING: il doit correspondre à l'une des propositions suivante (respecter la casse : DOM, DOM P, DOM FREQ, DOM P FREQ, P FREQ, P, FREQ, NORULES" ; 
+				put "ERROR: Le paramètre '&primary_secret_rules' est mal renseigné. Il doit correspondre à l'une des propositions suivantes (respecter la casse : DOM, DOM P, DOM FREQ, DOM P FREQ, P FREQ, P, FREQ, NORULES)." ; 
 			run ; 
 			%ABORT ; 
 		%end ; 
 
-	/* On vérifie que les répertoire de travail et de Tau-Argus ne comporte pas de caractère accentué dans le cas où 
+	/* On vérifie que les répertoires de travail et de Tau-Argus ne comporte pas de caractère accentué dans le cas où 
 	l'on utilise la version opensource de Tau-Argus.*/
 	%if &TauArgus_version = opensource %then
 		%do ;
@@ -2211,8 +2327,8 @@
 			%if &test_accent	=	yes %then  
 				%do ; 
 					data _null_ ; 
-						put "ERROR: un ou plusieurs caractères accentués dans les répertoires de travail empêche Tau-Argus de fonctionner." ; 
-						"WARNING: le répertoire de travail et/ou celui de Tau-Argus contiennent un ou plusieurs caractères accentués. La version open-source (version 4.1) de Tau-Argus ne fonctionne pas avec." ; 
+						put "ERROR: Un ou plusieurs caractères accentués dans les répertoires de travail empêche Tau-Argus de fonctionner."
+						put "ERROR: Le répertoire de travail et/ou celui de Tau-Argus contiennent un ou plusieurs caractères accentués. Les versions open-source (> version 4.1) de Tau-Argus ne fonctionnent pas avec." ; 
 					run ; 
 					%ABORT ; 
 				%end ; 
@@ -2274,56 +2390,56 @@
 			run ;
 		%end ;
 
-	/* On vérifie que pour une tabulaton donnée, si c'est le solveur modular qui est demandé on a bien au moins une variable 
+	/* On vérifie que pour une tabulation donnée, si c'est la méthode modular qui est demandée on a bien au moins une variable 
 	hiérarchique.*/
 
 	%do g3	=	1 %to 1 ;
-		data test_solver;
+		data test_method;
 			tabulation			=	"&&tabulation_&g3" ;
 			tabulation_wo_hrc	=	tabulation ;
 			hierarchical_var	=	"&hierarchical_var" ;
 		run ;
 
 			%do g4	=	1	%to	6 ;
-				data test_solver ;
-					set test_solver ;
+				data test_method ;
+					set test_method ;
 					call symput("hrc&g4",compress(scan(compbl("&hierarchical_var"),&g4," ")));
 				run;
 				
-				data test_solver ;
-					set test_solver ;
+				data test_method ;
+					set test_method ;
 					hierarchical_var=tranwrd(hierarchical_var,"&&hrc&g4","");
 					tabulation_wo_hrc=tranwrd(tabulation_wo_hrc,"&&hrc&g4"," ");
 				run;
 			%end;	
 
 		data _null_ ;
-			set test_solver;
+			set test_method;
 			call symput ("tabulation",compress(tabulation));
 			call symput ("tabulation_wo_hrc",compress(tabulation_wo_hrc));
 		run;
 
 		%if &tabulation_wo_hrc = &tabulation %then 
 			%do ;
-				%if &&solver_&g3 = modular %then 
+				%if &&method_&g3 = modular %then 
 					%do;
 						data _null_ ; 
-							put "WARNING: Le solveur modular fonctionne mal avec des tabulations sans hiérarchies." ; 
+							put "WARNING: La méthode modular fonctionne mal avec des tabulations sans hiérarchies." ; 
 						run ;
 					%end;
-				%else %if &&solver_&g3 = %then
+				%else %if &&method_&g3 = %then
 					%do;
-						%if &solver = modular %then
+						%if &method = modular %then
 							%do;
 								data _null_ ; 
-									put "WARNING: Le solveur modular fonctionne mal avec des tabulations sans hiérarchies." ; 
+									put "WARNING: La méthode modular fonctionne mal avec des tabulations sans hiérarchies." ; 
 								run ;
 							%end;
 					%end;
 			%end;
 	%end;
 
-	/* Création d'un répertoire de fichier temporaires et d'un répertoire pour les masques définitifs.*/
+	/* Création d'un répertoire de fichiers temporaires et d'un répertoire pour les masques définitifs.*/
 	X mkdir "&library.\TEMPORARY FILES MACRO" ; 
 	X mkdir "&library.\RESULTS" ; 
 
@@ -2370,6 +2486,8 @@
 
 	%batch_file (
 		library				=	&library) ; 
+
+	%solver_batch(lp_solver_batch	=	&lp_solver);
 
 	%if &input	=	microdata %then 
 		%do ; 
@@ -2427,8 +2545,8 @@
 					%suppress 	(
 						bounds					=	&bounds	,
 						modelsize				=	&modelsize,
-						solver_all				=	&solver,
-						solver_x				=	&&solver_&g8,
+						method_all				=	&method,
+						method_x				=	&&method_&g8,
 						MaxTimePerSubtable		=	&MaxTimePerSubtable,
 						linked_tables			=	&linked_tables) ; 
 
@@ -2440,7 +2558,7 @@
 						%do ; 
 							data _null_ ; 
 								put "ERROR: longueur du paramètre '&library'+'&output_name' trop longue" ; 
-								"WARNING: la longueur du repertoire+nom du fichier de sortie Tau-Argus ne doit pas exceder 142 caractères" ; 
+								"WARNING: la longueur du répertoire+nom du fichier de sortie Tau-Argus ne doit pas excéder 142 caractères" ; 
 							run ; 
 							%ABORT ; 
 						%end ; 
@@ -2510,6 +2628,7 @@
 		tab12 (keep	=	operation instruction)
 		empty_batch (where	=	(operation in("<&read>"))) 
 		tab5
+		tab6
 		tab3 
 		tab4 
 		empty_batch (where	=	(operation in("<GOINTERACTIVE>"))) ; 
@@ -2540,8 +2659,8 @@
 					%if &&length_output_name_&g10 > 32 %then 
 						%do ; 
 							data _null_ ; 
-								put "ERROR: longueur du parametre output_name trop longue" ; 
-								put "WARNING: la longueur du output_name est trop longue, elle ne doit pas exceder 32 caractères. Par défaut ce paramètre équivaut à tabulation. Il est possible de le renseigner dans l'appel de la macro." ; 
+								put "ERROR: la longueur du parametre output_name est trop longue" ; 
+								put "WARNING: la longueur du output_name est trop longue, elle ne doit pas excéder 32 caractères. Par défaut ce paramètre équivaut à tabulation. Il est possible de le renseigner dans l'appel de la macro." ; 
 							run ; 
 							%ABORT ; 
 						%end ; 	
@@ -2572,7 +2691,7 @@
 				%end ; 
 		%end ;
 
-	/* On transforme les sorties sbs en fichiers apriori dans le cas où le paramètre '&outputtype'	=	APRIORI*/
+	/* On transforme les sorties sbs en fichiers d'a priori dans le cas où le paramètre '&outputtype'	=	APRIORI*/
 	%if &apriori_creation	=	yes %then 
 		%do ;
 			%if &outputtype ne 4 %then 
@@ -2608,112 +2727,10 @@
 			%end;
 		%end;
 
-	/* On corrige les output de type "intermediate format", qui contiennent à tord les cases vides.*/
-	%if &outputtype	=	5 %then 
-		%do ; 
-			%do g12	=	1 %to 10 ;
-				%if &&tabulation_&g12 ne %then
-					%do ;
-						%correction_output5 (
-							library			=	&library,
-							output_name		=	&&output_name_&g12 );							
-					%end ; 
-			%end;
-		%end;
-
 	/* On vide la work.*/
 	%if &work	=	empty %then 
 		%do ; 
 			proc datasets kill nolist ; 
 			quit ; 
 		%end ; 
-%mend ; 
-
-
-
-/*
-------------------------------------------------------------------------------------
-				CONSEILS EN AMONT DE L'UTILISATION DE LA MACRO
-------------------------------------------------------------------------------------
-- Faire en sorte qu'il n'y ait pas de valeur manquante (par exemple, effectif = .) pour les variables de réponse (numériques). Ces unités ne participant 
-pas aux cases de la tabulation ne doivent pas être comptabilisées, elles sont hors champ.
-
-- Si pour certaines unités on dispose d'autorisations spéciales de diffusion (comme pour La Poste, largement dominant dans son secteur d'activité, pour les 
-diffusions ESANE par exemple), il conviendra de préparer un fichier apriori (.hst) pour chaque tabulation, avec le statut que l'on désire appliquer aux cases 
-concernées par la présence des unités en question.
-
-- La table sas correspondant au paramètre '&tabsas' ne doit comporter que les unités participant aux tabulations demandées. Elle pourra néanmoins comporter  
-des variables ne servant pas à la pose du secret, mais plus elle sera volumineuse, plus le traitement sera long.
-
-- Préférer les noms de variable courts, pour éviter d'avoir des TABULATIONS dépassant les 32 caractères.
-
-- Si on doit secrétiser un nombre important de tabulations, a fortiori si les données individuelles sont volumineuses, il peut être intéressant de tester le 
-secret primaire en amont (via une proc means par exemple), pour n'utiliser la présente macro que pour les tabulations concernées par du secret primaire.
-
-- Il est possible d'utiliser les sous-macro contenues dans la macro principale, notamment :
-	%ASC_RDA		=	génère les fichiers plats de micronnées (.asc) et de métadonnées (.rda) au format compatible avec Tau-Argus, à partir de la TABSAS.
-	%HRC			=	génère un fichier de hiérarchie (.hrc), à partir de la TABSAS. Celle-ci devra comporter toutes les variables correspondant aux 
-						différents niveaux agrégés souhaités dans sa hiérarchie.
-	%TAUARGUSEXE	=	permet de lancer un fichier batch Tau-Argus (.arb) à partir de sas.
-	%FORMATING		=	génère des tables sas et des fichiers excel à partir des sorties Tau-Argus au format SBS (.sbs). La présentation des masques de secret 
-						ressemble à un output d'un proc summary (une ligne = une case de la tabulation).
-	%SYNTHESIS		=	génère un fichier excel comptabilisant le nombre de cases selon leur statut, pour chaque tabulation et pour l'ensemble des tabulations.
-
-- Lorsque l'on travaille à partir de tableaux en entrée, plutôt qu'à partir de microdonnées (&input = tabledata), il peut être préférable d'arrondir ses variables 
-de réponse à l'unité, avant de tabuler. Tau-Argus est très sensible à la non additivité des marges (même s'il existe, en manuel, des options pour ne pas tenir 
-compte de ce problème).
-
-------------------------------------------------------------------------------------
-								LES IMPERATIFS ET LIMITES
-------------------------------------------------------------------------------------
-- Faire en sorte que les variables hiérarchiques aient des modalités fines de même longueurs.
-
-- dans le cas de variable hiérachique non symétrique et complexe (par exemple, si on désire diffuser au niveau communal dans une région, mais uniquement au niveau 
-départemental dans les autres régions), il faut préparer le fichier de hiérarchie en amont de l'utilisation de la macro. 
-
-- On ne peut gérer le secret que sur 10 tabulations par session Tau-Argus.
-
-- Modular ne peut gérer que 4 variables de ventilations maximum (en comptant toutes les variables des tableaux liés).
-
-- Hypercube ne peut gérer que 6 variables de ventilations maximum (en comptant toutes les variables des tableaux liés).
-
-- Hypercube ne fonctionne pas avec des hiérarchies avec plus de 7 niveaux (au moins dans la version 3.5 de Tau-Argus).
-
-
-------------------------------------------------------------------------------------
-									REMARQUES GENERALES
-------------------------------------------------------------------------------------
-- Dans certains cas, il n'est pas nécessaire de gérer la confidentialité en déterminant le secret primaire et en appliquant une couche de secret secondaire. 
-Certaine variable de réponse peuvent être tellement correlées à d'autres variables de réponses (effectif ETP et effectif au 3112 par exemple) qu'il est 
-préférable de simplement appliquer le même masque de secret au deux variables, alors défini sur l'une des deux. La variable sur laquelle est déterminée le
-masque est appelée variable proxy. 
-
-- Certaines vérifications sont parfois nécessaires en plus de l'application de la macro ou de la gestion "à la main" du secret secondaire via Tau-Argus. 
-Par exemple, deux variables de ventilations peuvent avoir des modalités équivalentes sans pour autant que Tau-Argus ne soit capable de le savoir. Par exemple, 
-la division 17 de la NAF correspond à la modalité E35 de la Nomenclature d'activités économiques 2008 (NCE 2008). Il conviendra en aval de l'execution de la 
-macro, de vérifier que les cases équivalentes ont bien le même statut (notamment au niveau du secret secondaire). Si ce n'est pas le cas, on pourra alors générer 
-un fichier apriori (.hst) pour spécifier le statut que doit prendre les cases concernées.
-
-- Dans le cas des variables hiérarchiques, il est préférable d'éviter d'avoir des modalités identiques correspondant à des niveaux d'agrégations différentes : 
-par exemple le niveau A38 "FZ" ne correspond pas pour Tau-Argus au niveau A10 "FZ". Préférez un recodage en amont de l'appel de la macro (par exemple : "A38_FZ"
-et "A10_FZ"), pour que Tau-Argus distingue bien les deux lignes du tableau.
-
-- Dans le cas de tableaux trop volumineux (trop de cases), ou avec des valeurs très grandes (en millions/milliard) et avec beaucoup de déimales, il peut être 
-envisageable de faire tourner la macro sur une version modifiée de la variable de réponse. Parfois le fait d'arrondir les données peut suffire à ce que le 
-secret secondaire se fasse. Si cela ne suffit pas, on pourra essayer de diviser la variable par 10 par exemple. */
-
-/* Mise à jour - 28/08/2018 */
-/* Ajout des paramètres hierarchy_7 à hierarchy_10 */
-/* Correction du paramètre &tabulation (qui devient &tabulation_number) dans les sous-macro %OPENTABLEDATA et %SPECIFYTABLE_SAFETYRULES. Lorsque l'on utilisait 
-l'option &input	=	tabledata, si les tabulations n'étaient pas dans l'ordre alphabétique dans l'appel de la macro, cela provoquait une erreur d'écriture dans 
-le batch qui le rendait faux. */
-/* Correction dans la sous macro %SPECIFYTABLE_SAFETYRULES. La condition "%if holding	=	%then ; %do ;" devient "%if &holding	=	%then %do ;" ... 
-il manquait jusqu'alors le "&" et il y avait un ";" en trop. Sous la condition "%if holding	ne %then %do;", un certain nombre de paramètres censé être relatifs 
-aux paramètres "holding" ne l'étaient pas, c'est corrigé. Cela impliquait que les paramètres de secret primaire du niveau individuel étaient appliqué tel quel 
-sur le niveau holding, ce qui est le cas le plus souvent.*/
-/* Dans la sous macro %formating, mise en commentaire de la ligne 
-"if flag in ("B" "F") and individu_count <3 then flag	=	"A" ;"
-Le "3" correspond à la règle appliquée pour les entreprises, mais il aurait fallu que ce soit le paramètre &frequency qui soit utilisé.
-Cela n'a pas d'incidence particulière, il s'agissait d'une réctification du flag pour les cases ayant un soucis de dominance et de fréquence en même temps. Nous
-imposions le flag du secret primaire de fréquence par convention. Mais dans tous les cas, la case était bien comptée dans le secret primaire.*/
-/* Ajout de précision par rapport au paramètre "&primary_secret_rules", en particulier sur la valeur "NORULES".*/
+%mend ;

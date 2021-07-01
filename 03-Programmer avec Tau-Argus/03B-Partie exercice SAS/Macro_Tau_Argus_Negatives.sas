@@ -1,30 +1,36 @@
-/* Macro tau_argus_negatives                                                     									*/
+/* Macro %Tau_Argus_Negatives                                                     									*/
 /********************************************************************************************************************/
-/* Cette macro fait appel à la macro %TAUARGUS, et propose une gestion de tabulation comportant des cases négatives	*/
-/* selon une méthode mise en place au DMS par Gaël de Peretti, Julien Lemasson et Maxime Bergeat. 					*/
+/* Cette macro fait appel à la macro %Tau_Argus, et propose une gestion de tabulation comportant des cases négatives*/
+/* selon une méthode mise en place au département des méthodes statistiques de l'Insee par Gaël de Peretti,  		*/
+/* Julien Lemasson et Maxime Bergeat.																				*/
 /* Compte tenu du fait que l'application stricte des règles du secret donne des résultats qui ne sont pas 			*/
 /* satisfaisants sur ce type de tableau, la méthode consiste a faire le secret primaire en double : sur la variable */
 /* de réponse telle quelle d'une part, et sur la variable de réponse en valeur absolue d'autre part. On compile		*/
 /* ensuite les résultats avec comme règle : si la case est cachée dans au moins un des deux cas de figure, alors on */
 /* cache. Pour le secret secondaire, nous calculons une variable de coût de secret secondaire à partir de la 		*/
 /* variable de réponse problématique. Les valeurs des différents individus sont modifiées de sorte qu'il n'y ait 	*/
-/* plus de valeur négatives, que l'ordre des individus soit respecté et que le grand total soit identique, selon la */
-/* formule suivante : Vi'=[ (Vi-min(Vi)) x ?Vi] / [ ?((Vi-min(Vi)) ] (Vi étant la valeur pour un individus i.		*/ 
-/* Les masques de secret produit présentent néammoins la variable de réponse initiale pour faciliter les éventuels	*/
-/* contrôles.																										*/
-/* L'appel de la macro %TAUARGUS est ici peu modulable, de nombreux paramètres sont les valeurs par défaut 			*/
+/* plus de valeur négative, que l'ordre des individus soit respecté et que le grand total soit identique, selon la  */
+/* formule suivante : Vi'=[ (Vi-min(Vi)) x somme(Vi)] / [ somme((Vi-min(Vi)) ] (Vi étant la valeur pour un individu */ 
+/* i).Les masques de secret produit présentent néanmoins la variable de réponse initiale pour faciliter les 		*/
+/* éventuels contrôles.																								*/
+/* L'appel de la macro %Tau_Argus est ici peu modulable, de nombreux paramètres sont les valeurs par défaut 		*/
 /* ('&input', '&primary_secret_rules' ...).																			*/
 /********************************************************************************************************************/
-/* Author: Julien LEMASSON (02/11/2017)  								            								*/
+/* Auteurs : Julien LEMASSON, Maxime BEAUTE	            								                            */
 /********************************************************************************************************************/
-/* Macro Parameters                                                                									*/
+/* Version : cf. CHANGELOG.md            	            								                            */
 /********************************************************************************************************************/
-/*TauArgus_exe			=	Répertoire et nom de l'application Tau-Argus (Ne pas mettre l'extension .exe).			*/
-/*								C:\Program Files (x86)\TauArgus\TauArgus.exe : (par défaut) Fonctionne sous AUS, sur*/
-/*																				le serveur-de-calcul.insee.fr		*/
-/*library				=	OBLIGATOIRE. Repertoire de travail. S'y trouvent la table sas en entrée, les éventuels	*/
-/*							éventuels fichiers plats décrivant les hiérachies des variables hiérarchiques (.hrc), 	*/
-/*							et les éventuels fichiers apriori (.hst).												*/
+/* Paramètres de la macro                                                                							*/
+/********************************************************************************************************************/
+/*TauArgus_exe			=	(OBLIGATOIRE) Répertoire et nom de l'application Tau-Argus. 							*/
+/*							Ce paramètre spécifie donc indirectement la version de Tau-Argus utilisée.				*/
+/*							Par exemple : Y:\Logiciels\TauArgus\TauArgus4.2.0b5\TauArgus.exe						*/
+/*TauArgus_version		=	A spécifier lorsque l'on utilise les versions de Tau-Argus antérieures ou égales à 3.5.	*/
+/*								opensource : (par défaut)															*/
+/*								(vide) : pour les versions 3.5 ou moins												*/
+/*library				=	OBLIGATOIRE. Répertoire de travail. S'y trouvent la table sas en entrée, les éventuels	*/
+/*							fichiers plats décrivant les hiérarchies des variables hiérarchiques (.hrc), 	        */
+/*							et les éventuels fichiers d'a priori (.hst).											*/
 /*								(vide) : par défaut																	*/
 /*tabsas				=	nom de la table sas de microdonnées. Obligatoire si '&input'='microdata'.				*/
 /*								(vide) : par défaut																	*/
@@ -35,32 +41,39 @@
 /*							SIREN. Il ne peut n'y en avoir qu'une par appel de macro.								*/
 /*								(vide) : par défaut																	*/
 /*tabulation_1			=	Liste des variables (séparées d'un espace) décrivant la première tabulation. On placera	*/
-/*							les variables de ventilation (caractère) en premiers, pour finir par la variable de 	*/
+/*							les variables de ventilation (caractère) en premier, pour finir par la variable de 	    */
 /*							réponse (numérique). Si la tabulation est un tableau de comptage, la variable de réponse*/
 /*							devra être "FREQ", la macro n'appliquera alors pas la règle de dominance.				*/
 /*								(vide) : par défaut																	*/
 /*tabulation_10			=	idem, pour la deuxième... jusqu'à la 10ème tabulation.									*/
 /*								(vide) : par défaut																	*/
-/*hierarchical_var		=	liste des variables hiérarchiques, séprarées par un espace. À chaque variable doit être */
-/*							associé un fichier plat (.hrc) décrivant la hiérarchie de la variable. 					*/
+/*hierarchical_var		=	liste des variables hiérarchiques, séparées par un espace. À chaque variable doit être 	*/
+/*							associée un fichier plat (.hrc) décrivant la hiérarchie de la variable. 				*/
 /*								(vide) : par défaut																	*/
-/*solver				=	Spécifie le solveur utilisé pour traiter le secret secondaire.							*/
+/*method				=	Spécifie la méthode utilisée pour traiter le secret secondaire.							*/
 /*								hypercube : (par défaut)															*/
-/*								modular : nécessite la license payante sous Tau-Argus 3.5. 							*/
-/*								optimal : nécessite la license payante sous Tau-Argus 3.5, ne fonctionne pas pour 	*/
-/*										  des tableaux liés.														*/
+/*								modular 																			*/
+/*								optimal : ne fonctionne pas pour des tableaux liés.									*/
+/*solver				=	Ancien paramètre désormais appelé method.												*/
+/*							Pour des raisons de clarté, il n'est plus possible d'utiliser ce paramètre.				*/
+/*lp_solver				=	Spécifie le solveur à utiliser pour traiter le secret secondaire.						*/
+/*								free : solveur gratuit (par défaut)													*/
+/*								xpress	: nécessite la licence XPress de FICO.										*/
+/*								cplex : nécessite la licence CPlex d'IBM.											*/
+/*								(vide) : solveur non-spécifié.														*/
 /*synthesis				=	Permet de générer un fichier excel résumant le nombre de case selon le statut de chaque */
 /*							masque sous format excel du répertoire RESULTS.											*/
 /*								yes																					*/
 /*								no : (par défaut)																	*/
 /*temp_file				=	Permet de supprimer les fichiers temporaires, notamment la table jumelle de &tabsas, qui*/
-/*							qui contient la variable de coût, ainsi que les masques de secret intermédiaires, avec 	*/
+/*							contient la variable de coût, ainsi que les masques de secret intermédiaires, avec 	    */
 /*							le double secret primaire.																*/
 /*								no : par défaut																		*/
+/********************************************************************************************************************/
 
-%macro Tau_Argus_negatives (
-	TauArgus_exe		=	C:\Program Files (x86)\TauArgus\TauArgus.exe ,
-	TauArgus_version	=	,
+%macro Tau_Argus_Negatives (
+	TauArgus_exe		=	,
+	TauArgus_version	=	opensource,
 	library				=	,
 	tabsas				=	,
 	tabulation_1		=	,
@@ -76,7 +89,9 @@
 	hierarchical_var	=	,
 	weight_var			=	,
 	holding_var			=	,
-	solver				=	hypercube,
+	method				=	hypercube,
+	solver				=	,
+	lp_solver			=	,
 	temp_file			=	no) ;
 
 	libname tabsas "&library" ;
@@ -136,7 +151,8 @@
 		%TAU_ARGUS (
 			TauArgus_exe		=		&TauArgus_exe,
 			TauArgus_version	=		&TauArgus_version,
-			solver				=		,
+			method				=		,
+			solver				=		&solver.,
 			tabsas				=		&tabsas._bis,
 			library 			=	 	&library.,
 			tabulation_1		=		&tabulationn.,
@@ -182,7 +198,7 @@
 			drop flagbasic flagabs ;
 		run ;
 		
-		/* On exporte le tout dans un fichier apriori.*/
+		/* On exporte le tout dans un fichier d'a priori.*/
 		proc export data		=	&output_name
 					outfile		=	"&library.\&tabulationn.cost.hst" 
 		        	dbms		=	dlm replace ;
@@ -202,7 +218,7 @@
 				%end ; 
 		%end ; 
 		
-		/* On applique cette double couche de secret primaire à toute les tabulations.*/
+		/* On applique cette double couche de secret primaire à toutes les tabulations.*/
 		%do kk	=	1 %to 10 ;
 			%if &&tabulation_&kk ne %then 
 				%do;
@@ -219,7 +235,7 @@
 				%end;
 		%end;
 
-	/* On fait le secret secondaire en important le secret primaire par les fichiers apriori générés en amont.*/
+	/* On fait le secret secondaire en important le secret primaire par les fichiers d'a priori générés en amont.*/
 	%TAU_ARGUS (
 		TauArgus_exe			=	&TauArgus_exe,
 		TauArgus_version		=	&TauArgus_version,
@@ -248,10 +264,11 @@
 		hierarchical_var		=	&hierarchical_var,
 		weight_var				=	&weight_var,
 		holding_var				=	&holding_var,
-		solver					=	&solver,
+		method					=	&method,
+		lp_solver				=	&lp_solver,
 		primary_secret_rules	=	NORULES	) ;
 
-	/* Pour plus de clarté, on récupère les bonnes informations de statut des cases de dominance et de valeurs de la case.*/
+	/* Pour plus de clarté, on récupère les bonnes informations de statut des cases de dominance et de valeur de la case.*/
 	%macro formating_negatives (tabulationn,output_name);
 		data _null_ ; 
 			call symput ("response_varr",lowcase(compbl(scan("&tabulationn.",-1," ")))) ; 
